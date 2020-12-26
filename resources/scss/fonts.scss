@@ -1,0 +1,40 @@
+// Archia
+@include font-face(
+    "Archia",
+    "../../fonts/archia-regular-webfont",
+    400,
+    null,
+    woff woff2
+);
+
+@include font-face(
+    "Archia",
+    "../../fonts/archia-bold-webfont",
+    700,
+    null,
+    woff woff2
+);
+
+@include font-face(
+    "Archia",
+    "../../fonts/archia-light-webfont",
+    300,
+    null,
+    woff woff2
+);
+
+@include font-face(
+    "Archia",
+    "../../fonts/archia-semibold-webfont",
+    600,
+    null,
+    woff woff2
+);
+
+@include font-face(
+    "Archia",
+    "../../fonts/archia-medium-webfont",
+    500,
+    null,
+    woff woff2
+);

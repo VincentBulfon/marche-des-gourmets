@@ -1,0 +1,174 @@
+body {
+    overflow-x: hidden;
+}
+* {
+    font-family: $archia;
+}
+
+.header {
+    //display
+    position: relative;
+    display: grid;
+    grid-template-rows: 46px 1fr;
+    grid-template-columns: 6.25% auto 6.25%;
+    min-height: 226px;
+    height: 70.625vw;
+    //color
+    background-color: $darkgrey;
+
+    &__title--manuscrit {
+        @include fontSize(16px);
+    }
+    &__toggle {
+        position: relative;
+        z-index: 1000;
+        justify-self: end;
+    }
+    &__nav {
+        //display
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        //color
+        background-color: $darkgrey;
+        //other
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    }
+
+    //common to nav and title
+    &__title,
+    &__toggle {
+        grid-row: 1/1;
+        grid-column: 2/2;
+        align-self: center;
+    }
+    &__landing {
+        //display
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1/4;
+        grid-row: 2/2;
+        width: 100%;
+        //text
+        font-family: $archia;
+        //other
+        background-image: url("../assets/produits_sur_ardoise.jpg");
+        background-repeat: no-repeat;
+        background-clip: border-box;
+        background-size: cover;
+    }
+}
+
+.title__link {
+    //display
+    display: block;
+    width: 80px;
+    justify-self: start;
+    //text
+    font-family: $archia;
+    @include fontSize(10px);
+    font-weight: 400;
+    line-height: 0.7em;
+    text-decoration: none;
+    //color
+    color: $orange;
+}
+
+.manuscrit {
+    //color
+    color: $green;
+    //text
+    font-family: "Timberline";
+}
+
+.manuscrit:first-letter {
+    text-transform: uppercase;
+}
+
+.landing {
+    &__intro {
+        //display
+        width: 164px;
+        //text
+        @include fontSize(16px);
+        text-align: left;
+        line-height: 1.15em;
+        //color
+        color: $orange;
+    }
+    &__manuscrit {
+        //text
+        font-size: 2.2017766497em;
+        //color
+        color: $green;
+    }
+}
+
+.exposure {
+    font-variant-position: super;
+}
+
+#menu:checked ~ .header__nav {
+    left: 0;
+}
+
+.nav {
+    &__list {
+        //display
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 55px;
+        border-bottom: 1px solid $orange;
+    }
+    &__item {
+        //display
+        display: block;
+        padding: 0.5em 0; //16px
+        //text
+        font-family: $archia;
+        font-weight: regular;
+        @include fontSize(16px);
+        @include lineHeight(26.6px);
+        text-align: center;
+        text-decoration: none;
+        //color
+        color: $green;
+        //other
+        transition: 0.3s;
+        &::after {
+            //display
+            display: block;
+            width: 0%;
+            height: 1px;
+            position: relative;
+            left: 50%;
+            //color
+            background-color: $orange;
+            //other
+            content: "";
+            transition: cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.3s;
+        }
+        &:hover {
+            color: $orange;
+            &::after {
+                width: 100%;
+                left: 0;
+            }
+        }
+        &:active {
+            color: $orange;
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}

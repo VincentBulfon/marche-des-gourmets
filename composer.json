@@ -15,7 +15,8 @@
         "laravel/framework": "^8.12",
         "laravel/nova": "*",
         "laravel/tinker": "^2.5",
-        "whitecube/nova-flexible-content": "^0.2.6"
+        "whitecube/nova-flexible-content": "^0.2.6",
+        "whitecube/nova-page": "^0.2.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

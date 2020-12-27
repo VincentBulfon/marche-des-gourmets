@@ -16,30 +16,10 @@
                 Qu'est-ce que le marché des gourmets?
             </h2>
             <div class="intro__wrapper">
-
+                {{dd($intro->flexibleContent)}}
                 @foreach($intro->flexibleContent as $content)
                 <div class="intro__main"> {!!$content->contenu!!}</div>
-
-
                 @endforeach
-                <!-- <p class="intro__main">
-                    Une trentaine d'exposants des<strong class="strong"> "métier de bouche" </strong>qui en ont
-                    fait
-                    la réputation.
-                </p>
-                <p class="intro__main">
-                    Un <strong class="strong"> bar et restaurant </strong>tenu par les
-                    bénévoles du Rotary Club de Flémalle.
-                </p>
-                <p class="intro__main">
-                    une <strong class="strong"> garderie </strong>pour les enfants et une
-                    <strong class="strong"> entrée gratuite </strong> jusqu'a 16 ans.
-                </p>
-                <p class="intro__main">
-                    Une entrée à <strong class="strong">6€</strong> dont les bénéfices sont
-                    reversés à des associtions ou utilisés pour
-                    <strong class="strong"> l'aide à la jeunesse et aux plus démunis.</strong>
-                </p> -->
                 <a
                     class="intro__cta cta"
                     href=""

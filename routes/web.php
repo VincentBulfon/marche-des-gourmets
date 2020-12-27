@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomepageController::class, 'index']);
+Route::get('/', [HomepageController::class, 'index'])->template(\App\Nova\Templates\Home::class)->name('home');
 Route::get('/qui-sommes-nous', function () {
     return view('who-are-we');
 });

@@ -4,18 +4,15 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Trix;
-use Whitecube\NovaFlexibleContent\Flexible;
 
-class Intro extends Resource
+class Date extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Intro::class;
+    public static $model = \App\Models\Date::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -43,11 +40,6 @@ class Intro extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            //Text::make('content')->placeholder('Entre votre contenu ici')
-            Flexible::make('content')
-            ->addLayout('Paragraphe d\'introduction au maché des gourmets', 'Paragraphe', [
-                Trix::make('Contenu')
-            ])->button('Ajouter un pragraphe')
         ];
     }
 

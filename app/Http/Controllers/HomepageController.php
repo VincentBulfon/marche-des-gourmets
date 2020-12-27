@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Homepage;
-use App\Models\Intro;
 use Illuminate\Http\Request;
+use Whitecube\NovaPage\Pages\Manager;
+use Whitecube\NovaPage\Pages\Template;
 
 class HomepageController extends Controller
 {
@@ -13,10 +14,10 @@ class HomepageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Template $template, Manager $novapage)
     {
-        $intro = Intro::first();
-        //dd($intros);
+        $intro = $novapage->load('home');
+
         return view('homepage', compact('intro'));
     }
 

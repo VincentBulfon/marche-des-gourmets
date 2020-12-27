@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIntrosTable extends Migration
+class CreateDatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateIntrosTable extends Migration
      */
     public function up()
     {
-        Schema::create('intros', function (Blueprint $table) {
+        Schema::create('dates', function (Blueprint $table) {
             $table->id();
-            $table->json('content')->default(null);
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class CreateIntrosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('intros');
+        Schema::dropIfExists('dates');
     }
 }

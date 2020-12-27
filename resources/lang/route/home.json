@@ -1,0 +1,37 @@
+{
+    "title": "Homepage",
+    "created_at": "2020-12-27 11:00:00",
+    "updated_at": "2020-12-27 15:42:51",
+    "attributes": {
+        "intro": [
+            {
+                "layout": "Paragraphe",
+                "key": "hDGKSxtXsmrAx5MM",
+                "attributes": {
+                    "contenu": "<div>Une trentaine d'exposants des<strong> \"m\u00e9tier de bouche\" <\/strong>qui en ont fait la r\u00e9putation.<\/div>"
+                }
+            },
+            {
+                "layout": "Paragraphe",
+                "key": "nCP80oOi7TjSrZZ9",
+                "attributes": {
+                    "contenu": "<div>Un <strong>&nbsp;bar et restaurant <\/strong>tenu par les b\u00e9n\u00e9voles du Rotary Club de Fl\u00e9malle.<\/div>"
+                }
+            },
+            {
+                "layout": "Paragraphe",
+                "key": "ApvThmk4aGRGZOVv",
+                "attributes": {
+                    "contenu": "<div>Une <strong>&nbsp;garderie <\/strong>pour les enfants et une <strong>&nbsp;entr\u00e9e gratuite <\/strong>jusqu'a 16 ans.<\/div>"
+                }
+            },
+            {
+                "layout": "Paragraphe",
+                "key": "ijeAIFBp3MgL9PSA",
+                "attributes": {
+                    "contenu": "<div>Une entr\u00e9e \u00e0 <strong>6\u20ac<\/strong> dont les b\u00e9n\u00e9fices sont revers\u00e9s \u00e0 des associtions ou utilis\u00e9s pour <strong>&nbsp;l'aide \u00e0 la jeunesse et aux plus d\u00e9munis.<\/strong><\/div>"
+                }
+            }
+        ]
+    }
+}

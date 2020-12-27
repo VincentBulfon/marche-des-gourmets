@@ -13,6 +13,6 @@ class Intro extends Model
 
     public function getFlexibleContentAttribute()
     {
-        return $this->flexible('paragraphe');
+        return $this->flexible('content');
     }
 }

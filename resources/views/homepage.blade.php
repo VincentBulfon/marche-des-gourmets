@@ -16,14 +16,11 @@
                 Qu'est-ce que le marché des gourmets?
             </h2>
             <div class="intro__wrapper">
-                <!--  <p class="intro__main">
-                    Une trentaine d'exposants des<strong class="strong"> "métier de bouche" </strong>qui en ont
-                    fait
-                    la réputation.
-                </p> -->
-                {{dd($intro->flexibleContent)}}
-                @foreach($intro->flexibleContent) as $content)
-                <p>{{$content}}</p>
+
+                @foreach($intro->flexibleContent as $content)
+                <div class="intro__main"> {!!$content->contenu!!}</div>
+
+
                 @endforeach
                 <!-- <p class="intro__main">
                     Une trentaine d'exposants des<strong class="strong"> "métier de bouche" </strong>qui en ont

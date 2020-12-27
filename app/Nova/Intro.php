@@ -44,7 +44,7 @@ class Intro extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
             //Text::make('content')->placeholder('Entre votre contenu ici')
-            Flexible::make('Content')
+            Flexible::make('content')
             ->addLayout('Paragraphe d\'introduction au maché des gourmets', 'Paragraphe', [
                 Trix::make('Contenu')
             ])->button('Ajouter un pragraphe')

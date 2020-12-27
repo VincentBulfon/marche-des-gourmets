@@ -16,10 +16,13 @@
                 Qu'est-ce que le marché des gourmets?
             </h2>
             <div class="intro__wrapper">
-                {{dd($intro->flexibleContent)}}
-                @foreach($intro->flexibleContent as $content)
-                <div class="intro__main"> {!!$content->contenu!!}</div>
+
+                @foreach (Page::flexible('intro') as $content)
+                <div class="intro__main">
+                    {!!$content->contenu!!}
+                </div>
                 @endforeach
+                <!-- <div class="intro__main"> //content here </div> -->
                 <a
                     class="intro__cta cta"
                     href=""

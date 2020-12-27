@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Homepage;
 use Illuminate\Http\Request;
-use Whitecube\NovaPage\Pages\Manager;
-use Whitecube\NovaPage\Pages\Template;
+use Illuminate\Support\Facades\Facade;
+
 
 class HomepageController extends Controller
 {
@@ -14,11 +14,9 @@ class HomepageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Template $template, Manager $novapage)
+    public function index()
     {
-        $intro = $novapage->load('home');
-
-        return view('homepage', compact('intro'));
+        return view('homepage');
     }
 
     /**

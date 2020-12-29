@@ -1,0 +1,31 @@
+{
+    "title": "Infos",
+    "created_at": "2020-12-28 15:00:27",
+    "updated_at": "2020-12-28 15:44:21",
+    "attributes": {
+        "dates": [
+            {
+                "layout": "openDates",
+                "key": "TLeZdqXDpyfksNf1",
+                "attributes": {
+                    "startingTime": "",
+                    "endingTime": ""
+                }
+            },
+            {
+                "layout": "openDates",
+                "key": "6aCt2TTklvQ5pPFy",
+                "attributes": {
+                    "startingTime": "",
+                    "endingTime": ""
+                }
+            }
+        ],
+        "placeName": "Abbaye du Val Saint Lambert",
+        "placeAddress": "Cour du val 1-40, 4100 Seraing BE",
+        "mapsLink": "https:\/\/goo.gl\/maps\/vdSGCDcmJejtvcn3A",
+        "who": "<div>Un total de <strong>30 exposants<\/strong> des \"m\u00e9tier de bouche\" choisis par nos soins.<\/div>",
+        "information_sur_le_prix": "<div>Entr\u00e9e <strong>6\u20ac<\/strong> gratuit pour les moins de 16ans. Garderie pour les enfants sur place.<\/div>",
+        "placeLink": "https:\/\/goo.gl\/maps\/sjCz7NvSE4pR9Jg17"
+    }
+}

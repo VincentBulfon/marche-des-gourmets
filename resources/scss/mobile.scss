@@ -380,6 +380,9 @@ strong {
         //other
         list-style-position: inside;
         list-style-type: disc;
+        & div {
+            display: inline;
+        }
     }
     &__action {
         margin-bottom: calc(1.68em / 2);

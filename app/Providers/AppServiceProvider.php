@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Whitecube\NovaPage\Pages\Manager;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,8 +22,8 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Manager $pages)
     {
-        //
+        $pages->registerOption('Infos', \App\Nova\Templates\Infos::class);
     }
 }

@@ -4,7 +4,7 @@
 
 @section('main')
 <div class="header__landing">
-    <p class="landing__intro">Le 20<span class="exposure">e</span> marché <br> des <span
+    <p class="landing__intro">Le {{Page::get('edition')}}<span class="exposure">e</span> marché <br> des <span
             class="landing__manuscrit manuscrit"
         >Gourmets</span></p>
 </div>
@@ -17,9 +17,9 @@
             </h2>
             <div class="intro__wrapper">
 
-                @foreach (Page::flexible('intro') as $content)
+                @foreach (Page::flexible('intro') as $layout)
                 <div class="intro__main">
-                    {!!$content->contenu!!}
+                    @markdown($layout->content)
                 </div>
                 @endforeach
                 <!-- <div class="intro__main"> //content here </div> -->
@@ -92,23 +92,24 @@
             </section>
             <section class="second__card second__card--right">
                 <h3 class="card__header">Où?</h3>
-                <p class="card__content">À l' <strong class="card__bold">abbaye du Val Saint Lambert </strong>
+                <p class="card__content">@option('Infos.placeName')
                 </p>
-                <p class="card__content"><strong class="card__regular"> Esplanade du Val St-Lambert BE 4100
-                        Seraing </strong></p>
+                <p class="card__content"><strong class="card__regular"> @option('Infos.placeAddress')
+
+                    </strong></p>
                 <a
-                    href="#"
+                    href="@option('Infos.placeLink')"
                     class="card__cta"
+                    target="blank"
                 >Voir le trajet sur Google maps</a>
             </section>
             <section class="second__card second__card--right">
                 <h3 class="card__header">Qui?</h3>
-                <p class="card__content">Un total de<span class="card__bold"> 30 exposants </span>des "métier de
-                    bouche" choisis par nos soins.</p>
+                <div class="card__content"> @option('Infos.who')</div>
                 <a
                     href="/exposants"
                     class="card__cta"
-                >AVoir les exposants</a>
+                >Voir les exposants</a>
             </section>
             <section class="second__card second__card--right">
                 <h3 class="card__header">Prix?</h3>

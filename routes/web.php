@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomepageController::class, 'index'])->template(\App\Nova\Templates\Home::class)->name('home');
 Route::get('/qui-sommes-nous', function () {
     return view('who-are-we');
-});
+})->template(\App\Nova\Templates\WhoWeAre::class)->name('who we are');
 Route::get('/exposants', function () {
     return view('exhibitors');
 });

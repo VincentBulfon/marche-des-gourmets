@@ -1,0 +1,68 @@
+{
+    "title": "Qui sommes nous",
+    "created_at": "2020-12-28 11:00:00",
+    "updated_at": "2020-12-29 10:42:27",
+    "attributes": {
+        "actions": [
+            {
+                "layout": "actions",
+                "key": "aFyRaDRxOWF8Xx0T",
+                "attributes": {
+                    "action": "<div>Appuyer des projets d\u2019<strong>extension de foyers d\u2019accueil</strong> de la r\u00e9gion li\u00e9geoise.</div>"
+                }
+            },
+            {
+                "layout": "actions",
+                "key": "V47iY0866zXdkm7R",
+                "attributes": {
+                    "action": "<div>Organiser le<strong> traitement m\u00e9dical </strong>puis l\u2019insertion sociale d\u2019une personne handicap\u00e9e.</div>"
+                }
+            },
+            {
+                "layout": "actions",
+                "key": "QHeWxrVr3BDbwQkE",
+                "attributes": {
+                    "action": "<div>Financer la r\u00e9alisation d\u2019un <strong>r\u00e9seau de distribution d\u2019eau</strong> au Mali Soutenir une association qui construit des <strong>maisons durables</strong> au Bangladesh.&nbsp;</div>"
+                }
+            },
+            {
+                "layout": "actions",
+                "key": "WsHj1my48UOIsvdd",
+                "attributes": {
+                    "action": "<div>D\u00e9velopper des <strong>programmes scolaires</strong> au B\u00e9nin et \u00e0 Madagascar.</div>"
+                }
+            },
+            {
+                "layout": "actions",
+                "key": "eneU88F4ZWxHWqcL",
+                "attributes": {
+                    "action": "<div>Financer des <strong>bourses d\u2019\u00e9tudes</strong> pour des jeunes d\u00e9sireux de se perfectionner \u00e0 l\u2019\u00e9trange.</div>"
+                }
+            },
+            {
+                "layout": "actions",
+                "key": "TY66E1TdIeUDs09U",
+                "attributes": {
+                    "action": "<div>Contribuer \u00e0 en finir avec la polio une fois pour toutes, priorit\u00e9 du Rotary, en partenariat avec la <strong>Fondation Bill &amp; Melinda Gates, </strong>l\u2019<strong>Organisation mondiale de la Sant\u00e9</strong> et l\u2019<strong>UNICEF.</strong></div>"
+                }
+            }
+        ],
+        "aboutUs": [
+            {
+                "layout": "about",
+                "key": "RyJHJhGvldMNAF2l",
+                "attributes": {
+                    "content": "Le Rotary Club de Fl\u00e9malle, compos\u00e9 de **36 membres b\u00e9n\u00e9voles,** fait partie du r\u00e9seau des 34.164 clubs du Rotary International, fort de **1.223.083 membres r\u00e9partis dans le monde entier.** Conscient des difficult\u00e9s pr\u00e9sentes dans notre soci\u00e9t\u00e9, il a inscrit dans ses objectifs l\u2019 **aide en faveur de la jeunesse et des plus d\u00e9munis.**"
+                }
+            },
+            {
+                "layout": "about",
+                "key": "OvXEvCsJScA00RMU",
+                "attributes": {
+                    "content": "Les b\u00e9n\u00e9voles pr\u00e9parent des activit\u00e9s o\u00f9 les b\u00e9n\u00e9fices font **int\u00e9gralement distribu\u00e9s** aux association que nous aidons. Soit sous la forme d'aide finaci\u00e8re soit d'aide mat\u00e9rielle. Une **\u00e9tude pr\u00e9alable** est toujours r\u00e9alis\u00e9e. "
+                }
+            }
+        ],
+        "rotaryLink": "https://www.rotaryclubflemalle.be/"
+    }
+}

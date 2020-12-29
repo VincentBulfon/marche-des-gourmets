@@ -668,6 +668,9 @@ strong {
   list-style-position: inside;
   list-style-type: disc;
 }
+.second__actions div {
+  display: inline;
+}
 .second__action {
   margin-bottom: calc(1.68em / 2);
   line-height: 1.68em;

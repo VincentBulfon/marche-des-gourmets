@@ -3,7 +3,7 @@
 namespace App\Nova\Templates;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Fields\Markdown;
 use Whitecube\NovaFlexibleContent\Concerns\HasFlexible;
 use Whitecube\NovaFlexibleContent\Flexible;
 use Whitecube\NovaPage\Pages\Template;
@@ -11,11 +11,6 @@ use Whitecube\NovaPage\Pages\Template;
 class Home extends Template
 {
     use HasFlexible;
-
-    public function getFlexibleContentAttribute()
-    {
-        return $this->flexible('intro');
-    }
 
     /**
      * Get the fields displayed by the resource.
@@ -26,9 +21,9 @@ class Home extends Template
     public function fields(Request $request)
     {
         return [
-            Flexible::make('intro')
-            ->addLayout('Paragraphe d\'introduction au maché des gourmets', 'Paragraphe', [
-                Trix::make('Contenu')
+            Flexible::make('Introduction du marché des gourmets', 'intro')
+            ->addLayout('Paragraphe d\'introduction au maché des gourmets', 'bloc', [
+                Markdown::make('Texte', 'content')
             ])->button('Ajouter un pragraphe')
         ];
     }

@@ -8,10 +8,9 @@
 		<h2 class="first__title title title--short">
 			Qui sont ces exposants
 		</h2>
-		<p class="first__about first__about--np">
-			Ce sont ceux que nous avons choisi pour leurs produits authentiques ou innovants. Et qui au fur et à
-			mesure du temps on fait notre réputation.
-		</p>
+		<div class="first__about first__about--np">
+			@markdown(Page::get('exhibitorsIntro'))
+		</div>
 	</section>
 	<section class="main__second main__second--green">
 		<div class="second__exhibs">

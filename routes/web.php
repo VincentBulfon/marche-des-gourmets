@@ -20,10 +20,7 @@ Route::get('/qui-sommes-nous', function () {
 })->template(\App\Nova\Templates\WhoWeAre::class)->name('who we are');
 Route::get('/exposants', function () {
     return view('exhibitors');
-});
-Route::get('/devenir-exposant', function () {
-    return view('exhibitors');
-});
+})->template(\App\Nova\Templates\Exhibitors::class)->name('became');
 Route::get('/contact', function () {
     return view('contact');
 });

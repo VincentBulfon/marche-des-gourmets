@@ -62,7 +62,7 @@
                         >Exposants</a></li>
                     <li><a
                             class="nav__item"
-                            href="/devenir-exposant#became"
+                            href="/exposants#became"
                         >Devenir exposant</a></li>
                     <li><a
                             class="nav__item"

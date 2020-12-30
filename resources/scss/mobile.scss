@@ -498,6 +498,12 @@ select::-ms-expand {
         font-weight: 300;
         line-height: 1.2em;
         padding-bottom: 0.694em; //5.358px
+        &--location {
+            font-weight: 400;
+        }
+        &--precise {
+            padding-bottom: 0.347em;
+        }
     }
     &__tags {
         margin-top: 23px; // #TODO convert in em

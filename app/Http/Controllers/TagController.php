@@ -2,23 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Exhibitor;
-use App\Models\Homepage;
+use App\Models\tag;
 use Illuminate\Http\Request;
 
-class HomepageController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $data = Exhibitor::with('tags')->get();
-        dd($data);
-
-        return view('homepage');
+        //
     }
 
     /**
@@ -45,10 +41,10 @@ class HomepageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Homepage      $homepage
+     * @param  \App\Models\tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function show(Homepage $homepage)
+    public function show(tag $tag)
     {
         //
     }
@@ -56,10 +52,10 @@ class HomepageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Homepage      $homepage
+     * @param  \App\Models\tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function edit(Homepage $homepage)
+    public function edit(tag $tag)
     {
         //
     }
@@ -68,10 +64,10 @@ class HomepageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Homepage      $homepage
+     * @param  \App\Models\tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Homepage $homepage)
+    public function update(Request $request, tag $tag)
     {
         //
     }
@@ -79,10 +75,10 @@ class HomepageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Homepage      $homepage
+     * @param  \App\Models\tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Homepage $homepage)
+    public function destroy(tag $tag)
     {
         //
     }

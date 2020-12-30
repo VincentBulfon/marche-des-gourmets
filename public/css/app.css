@@ -796,6 +796,12 @@ select::-ms-expand {
   line-height: 1.2em;
   padding-bottom: 0.694em;
 }
+.exhib__info--location {
+  font-weight: 400;
+}
+.exhib__info--precise {
+  padding-bottom: 0.347em;
+}
 .exhib__tags {
   margin-top: 23px;
   font-size: 13.3px;

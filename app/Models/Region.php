@@ -15,6 +15,6 @@ class Region extends Model
      */
     public function exhibitors()
     {
-        return $this->belongsToMany(Exhibitor::class);
+        return $this->hasMany(Region::class);
     }
 }

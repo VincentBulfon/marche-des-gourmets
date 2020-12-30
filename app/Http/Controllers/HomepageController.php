@@ -15,7 +15,7 @@ class HomepageController extends Controller
      */
     public function index(Request $request)
     {
-        $data = Exhibitor::with('tags')->get();
+        $data = Exhibitor::with('tags')->find(1);
         dd($data);
 
         return view('homepage');

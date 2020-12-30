@@ -15,15 +15,15 @@ class Exhibitor extends Model
      */
     public function tags()
     {
-        return $this->belongsToMany(Tag::class)->using(ExhibitorTag::class);
+        return $this->belongsToMany(Tag::class, 'exhibitor_tags');
     }
 
     /**
      * Relation between exhibitors and regions
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function regions()
+    public function region()
     {
-        return $this->belongsToMany(Region::class);
+        return $this->belongsTo(Region::class, 'region_id', 'id');
     }
 }

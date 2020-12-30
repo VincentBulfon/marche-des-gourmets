@@ -19,7 +19,8 @@ class ExhibitorTagSeeder extends Seeder
         $exhibitors = Exhibitor::all();
         $tags = Tag::all();
         foreach ($exhibitors as $exhibitor) {
-            $nbrOfTags = mt_rand(1, $tags->count());
+            $nbrOfTags = mt_rand(2, $tags->count() - 3);
+
             $exhibitorTags = $tags->random($nbrOfTags);
             foreach ($exhibitorTags as $exhibitorTag) {
                 ExhibitorTag::create(['exhibitor_id' => $exhibitor->id,

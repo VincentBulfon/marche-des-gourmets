@@ -53,7 +53,7 @@
                 name="isBio"
                 id="isBio"
                 value="true"
-                wire:click="$emitUp('isBio')"
+                wire:click="$emitTo('exhibitors','isBio')"
             >
         </div>
     </section>

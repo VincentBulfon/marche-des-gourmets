@@ -4,9 +4,12 @@ namespace App\Http\Livewire;
 
 use App\Models\Exhibitor;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Exhibitors extends Component
 {
+    use WithPagination;
+
     public $rq;
     public $data;
     public $region = 'all';

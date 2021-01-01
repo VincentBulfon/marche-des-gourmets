@@ -16,12 +16,12 @@ class ExhibitorForm extends Component
 
     public function tagChanged()
     {
-        $this->emitUp('updateTag', $this->tag);
+        $this->emitTo('exhibitors', 'updateTag', $this->tag);
     }
 
     public function regionChanged()
     {
-        $this->emitUp('updateRegion', $this->region);
+        $this->emitTo('exhibitors', 'updateRegion', $this->region);
     }
 
     public function render()

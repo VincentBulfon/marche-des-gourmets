@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomepageController::class, 'index'])->template(\App\Nova\Templates\Home::class)->name('home');
+Route::get('/', function () {
+    return view('homepage');
+})->template(\App\Nova\Templates\Home::class)->name('home');
 Route::get('/qui-sommes-nous', function () {
     return view('who-are-we');
 })->template(\App\Nova\Templates\WhoWeAre::class)->name('who we are');
-Route::get('/exposants', function () {
-    return view('exhibitors');
-})->template(\App\Nova\Templates\Exhibitors::class)->name('became');
+Route::get(
+    '/exposants',
+    function () {
+        return view('exhibitors', ['rq' => request()->query()]);
+    }
+)->template(\App\Nova\Templates\Exhibitors::class)->name('became');
 Route::get('/contact', function () {
     return view('contact');
 });

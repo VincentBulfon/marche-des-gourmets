@@ -14,5 +14,5 @@ class ExhibitorTag extends Model
      *
      * @var string
      */
-    protected $table = 'exhibitor _tags';
+    protected $table = 'exhibitor_tags';
 }

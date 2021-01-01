@@ -9,6 +9,9 @@ class Exhibitor extends Model
 {
     use HasFactory;
 
+    protected $casts = ['is_draf' => 'boolean'];
+    protected $with = ['region', 'tags'];
+
     /**
      * Relation between exhibitors and tags
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

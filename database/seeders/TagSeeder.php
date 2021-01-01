@@ -21,7 +21,7 @@ class TagSeeder extends Seeder
             ['tag' => 'fromages'],
             ['tag' => 'bières'],
             ['tag' => 'vins'],
-            ['tag' => 'bio'],
+            ['tag' => 'épices'],
         ];
         foreach ($data as $tag) {
             DB::table('tags')->insert($tag);

@@ -12,7 +12,7 @@ class ExhibitorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
     }
@@ -41,7 +41,7 @@ class ExhibitorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\exhibitor  $exhibitor
+     * @param  \App\Models\exhibitor     $exhibitor
      * @return \Illuminate\Http\Response
      */
     public function show(exhibitor $exhibitor)
@@ -52,7 +52,7 @@ class ExhibitorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\exhibitor  $exhibitor
+     * @param  \App\Models\exhibitor     $exhibitor
      * @return \Illuminate\Http\Response
      */
     public function edit(exhibitor $exhibitor)
@@ -64,7 +64,7 @@ class ExhibitorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\exhibitor  $exhibitor
+     * @param  \App\Models\exhibitor     $exhibitor
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, exhibitor $exhibitor)
@@ -75,7 +75,7 @@ class ExhibitorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\exhibitor  $exhibitor
+     * @param  \App\Models\exhibitor     $exhibitor
      * @return \Illuminate\Http\Response
      */
     public function destroy(exhibitor $exhibitor)

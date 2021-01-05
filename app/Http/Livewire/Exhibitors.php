@@ -24,6 +24,16 @@ class Exhibitors extends Component
 
     protected $queryString = ['isBio'];
 
+    public function mount()
+    {
+        if (isset($this->rq['tag'])) {
+            $this->tag = $this->rq['tag'];
+        }
+        if (isset($this->rq['region'])) {
+            $this->region = $this->rq['region'];
+        }
+    }
+
     public function updateTag($tag)
     {
         $this->tag = $tag;
@@ -41,7 +51,7 @@ class Exhibitors extends Component
 
     public function render()
     {
-        $request = Exhibitor::query()->where('is_draft', false);
+        $request = Exhibitor::query();
         if ($this->tag !== 'all') {
             $request = $request->whereHas('tags', function ($query) {
                 return  $query->where('tags.id', $this->tag);
@@ -55,7 +65,8 @@ class Exhibitors extends Component
         if ($this->isBio === true) {
             $request = $request->where('is_bio', true);
         }
-        $this->data = $request->orderBy('company_name', 'ASC')->get();
+        // $this->data = $request->orderBy('company_name', 'ASC')->paginate(10)->items();
+        $this->data = $request->where('validated', true)->orderBy('company_name', 'ASC')->get();
 
         return view('livewire.exhibitors', ['data' => $this->data, 'rq' => $this->rq]);
     }

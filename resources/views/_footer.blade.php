@@ -40,15 +40,18 @@
 				<ul>
 					<li><a
 							class="about__link"
-							href=""
+							href="https://www.facebook.com/March%C3%A9-des-Gourmets-563512323676395/"
+							target="blank"
 						>Le marché des gourmets sur facebook</a></li>
 					<li><a
 							class="about__link"
-							href=""
+							href="https://www.rotaryclubflemalle.be/"
+							target="blank"
 						>Le rotary de Flémalle</a></li>
 					<li><a
 							class="about__link"
-							href=""
+							href="https://www.provincedeliege.be/"
+							target="blank"
 						>La province de liège</a></li>
 				</ul>
 			</div>
@@ -72,8 +75,9 @@
 					class="link__legal"
 				>Mentions légales</a>
 				<a
-					href=""
+					href="/nova"
 					class="link__admin"
+					target="blank"
 				>Administrer le site</a>
 			</div>
 		</section>

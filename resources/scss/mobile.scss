@@ -414,6 +414,8 @@ strong {
     padding-bottom: 2.986em;
 }
 .label,
+.errorMessage,
+.sucessMessage,
 .fieldset__legend {
     margin-left: 0.469em;
     margin-bottom: 0.4822500012em; //6.43px
@@ -543,9 +545,11 @@ select::-ms-expand {
     //     height: 17px;
     // }
 }
+#isBio:checked + .label--checkbox::after,
 .fieldset__checkbox:checked + .fieldset__label::before {
     background-color: $darkestgreen;
 }
+.label--checkbox::after,
 .fieldset__label::before {
     content: "";
     display: inline-block;
@@ -555,6 +559,12 @@ select::-ms-expand {
     border: 2px solid $midgreen;
     vertical-align: text-top;
     transition: cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.3s;
+}
+
+.label--checkbox::after {
+    margin-right: 0;
+    margin-left: 0.694em;
+    vertical-align: inherit;
 }
 
 .main__third--bot {
@@ -659,4 +669,27 @@ select::-ms-expand {
     &__container {
         margin-bottom: 1.728em; //27.648px
     }
+}
+
+.errorMessage {
+    color: red;
+    margin-top: -1.44em;
+    padding-bottom: 1.44em;
+}
+
+.inputError {
+    border-color: red;
+    border-width: 2px;
+}
+.sucessMessage {
+    color: green;
+    font-weight: bold;
+    padding-bottom: 1.468em;
+}
+
+.empty {
+    text-align: center;
+    grid-column: 1/4;
+    margin: 0 auto;
+    @include fontSize(13.333px);
 }

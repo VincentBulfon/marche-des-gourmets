@@ -2,8 +2,6 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Region;
-use App\Models\Tag;
 use Livewire\Component;
 
 class ExhibitorForm extends Component
@@ -11,6 +9,8 @@ class ExhibitorForm extends Component
     public $region;
     public $tag;
     public $rq;
+    public $tags;
+    public $countries;
 
     protected $queryString = ['region', 'tag'];
 
@@ -26,9 +26,6 @@ class ExhibitorForm extends Component
 
     public function render()
     {
-        $tags = Tag::all(['id', 'tag']);
-        $countries = Region::all(['id', 'region', 'country'])->groupBy('country')->all();
-
-        return view('livewire.exhibitor-form', ['tags' => $tags, 'countries' => $countries, 'rq' => $this->rq]);
+        return view('livewire.exhibitor-form', ['rq' => $this->rq]);
     }
 }

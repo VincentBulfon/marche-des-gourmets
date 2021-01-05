@@ -7,7 +7,8 @@
         <label
             class="label label--fltr1"
             for="country"
-        >Séléctionner un pays&nbsp;:</label>
+        >Séléctionner une ville&nbsp;:</label>
+
         <select
             class="select select--fltr1"
             name="region"
@@ -15,12 +16,11 @@
             wire:model="region"
             wire:change="regionChanged"
         >
-
-            <option value="all">Tous les pays</option>
+            <option value="all">Toutes les régions</option>
             @foreach($countries as $k => $country)
             <optgroup label="{{$k}}">
                 @foreach($country as $region)
-                <option value="{{$region->id}}">{{$region->region}}</option>
+                <option value="{{$region['id']}}">{{$region['region']}}</option>
                 @endforeach
             </optgroup>
             @endforeach
@@ -40,21 +40,24 @@
         >
             <option value="all">Tous les types de produits</option>
             @foreach($tags as $tag)
-            <option value="{{$tag->id}}">{{$tag->tag}}</option>
+            <option value="{{$tag['id']}}
+            ">{{$tag['tag']}}</option>
             @endforeach
         </select>
-        <div class="checkbox--fltr3"><label
-                class="label label--checkbox "
-                for="isBio"
-            >Seulement les produits BIO</label>
+        <div class="checkbox--fltr3">
             <input
-                class="checkbox "
+                class="checkbox sro"
                 type="checkbox"
                 name="isBio"
                 id="isBio"
                 value="true"
                 wire:click="$emitTo('exhibitors','isBio')"
             >
+            <label
+                class="label label--checkbox "
+                for="isBio"
+            >Seulement les produits BIO</label>
+
         </div>
     </section>
     <noscript>

@@ -249,6 +249,9 @@
         @include fontSize(33.18px);
     }
     .label,
+    .errorMessage,
+    .sucessMessage,
+    .empty,
     .fieldset__legend {
         @include fontSize(19.2px);
     }
@@ -322,13 +325,13 @@
         margin-top: 4.774em;
         @include fontSize(19.2px);
     }
+    .total__definition,
+    .total__price {
+        @include fontSize(23px);
+    }
 }
 
 @media (min-width: 850px) {
-    .header__toggle,
-    #menu {
-        display: none;
-    }
     .header__landing {
         height: calc(70.625vw - 76px);
         max-height: calc(855px - 76px);
@@ -344,41 +347,8 @@
             grid-column: 2/3;
             grid-row: 1/2;
         }
-        &__nav {
-            display: block;
-            align-self: center;
-            position: relative;
-            justify-self: end;
-            grid-column: 2/3;
-            grid-row: 1/2;
-            width: auto;
-            height: auto;
-            left: auto;
-            top: auto;
-        }
     }
 
-    .nav {
-        &__list {
-            flex-direction: row;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        &__item {
-            display: inline-block;
-            padding: 0.5em 6px;
-            @include fontSize(16px);
-
-            line-height: 1.68em;
-            &:hover::after {
-                left: -6px;
-                padding: 0 6px;
-            }
-        }
-        &__tiem:not(:last-child) {
-            margin-right: 6px;
-        }
-    }
     .second__exhibs--filtred {
         display: grid;
         row-gap: 5.16em;
@@ -405,8 +375,43 @@
 }
 //////////////////////////////////////////////////////
 @media (min-width: 1100px) {
-    .header {
-        grid-template-columns: auto 1190px auto;
+    .header__toggle,
+    #menu {
+        display: none;
+    }
+    .header__nav {
+        display: block;
+        align-self: center;
+        position: relative;
+        justify-self: end;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: auto;
+        height: auto;
+        left: auto;
+        top: auto;
+    }
+
+    .nav {
+        &__list {
+            flex-direction: row;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        &__item {
+            display: inline-block;
+            padding: 0.5em 10px;
+            @include fontSize(16px);
+
+            line-height: 1.68em;
+            &:hover::after {
+                left: -6px;
+                padding: 0 5px;
+            }
+        }
+        &__tiem:not(:last-child) {
+            margin-right: 6px;
+        }
     }
     .main__first__bg {
         width: 40vw;
@@ -438,6 +443,9 @@
 }
 //////////////////////////////////////////////////////
 @media (min-width: 1300px) {
+    .header {
+        grid-template-columns: auto 1190px auto;
+    }
     .pagination {
         grid-column: 1/4;
     }

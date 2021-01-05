@@ -22,8 +22,9 @@ class CreateExhibitorsTable extends Migration
             $table->text('lastname');
             $table->text('email');
             $table->text('phone');
-            $table->boolean('is_bio');
-            $table->boolean('is_draft');
+            $table->text('about');
+            $table->boolean('is_bio')->default(false);
+            $table->boolean('validated')->default(true);
             $table->timestamps();
         });
     }

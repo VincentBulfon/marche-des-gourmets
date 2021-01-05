@@ -20,26 +20,7 @@
             </p>
         </div>
         <div class="bg">
-            <div class="form__container">
-                <form action="" class="contact__form form">
-                    <h3 class="tird__subtitle subtitle">Achat de billets</h3>
-                    <label for="name" class="label">Nom&nbsp;:</label>
-                    <input class="input" type="text" name="name" id="name">
-                    <label class="label" for="firstname">Prénom&nbsp;:</label>
-                    <input class="input" type="text" name="firstname" id="firstname">
-                    <label class="label" for="email">Email&nbsp;:</label>
-                    <input type="email" name="email" id="email" class="input">
-                    <label class="label" for="phone">Téléphone&nbsp;:</label>
-                    <input class="input" type="text" name="phone" id="phone">
-                    <label class="label" for="quantity">Quantité (6€ l'unité)&nbsp;:</label>
-                    <input class="input" name="quantity" id="quantity" type="number" />
-                    <dl class="total">
-                        <dt class="total__definition">Prix total&nbsp;:</dt>
-                        <dd class="total__price">18€</dd>
-                    </dl>
-                    <input type="submit" value="Envoyer" class="cta">
-                </form>
-            </div>
+            @livewire('ticketing')
         </div>
     </section>
     <section class="main__second">
@@ -53,7 +34,10 @@
                     <li class="card__date">Le<span class="card__bold">28</span> mars de <span class="card__bold">12h
                             à 20h</span></li>
                 </ol>
-                <a href="/billetterie" class="card__cta">Acheter des places</a>
+                <a
+                    href="/billetterie"
+                    class="card__cta"
+                >Acheter des places</a>
             </section>
             <section class="second__card">
                 <h3 class="card__header">Où?</h3>
@@ -61,13 +45,19 @@
                 </p>
                 <p class="card__content"><strong class="card__regular">Esplanade du Val St-Lambert BE 4100
                         Seraing</strong></p>
-                <a href="#" class="card__cta">Voir le trajet sur Google maps</a>
+                <a
+                    href="#"
+                    class="card__cta"
+                >Voir le trajet sur Google maps</a>
             </section>
             <section class="second__card">
                 <h3 class="card__header">Qui?</h3>
                 <p class="card__content">Un total de<span class="card__bold">30 exposants</span>des "métier de
                     bouche" choisis par nos soins.</p>
-                <a href="/exposants" class="card__cta">AVoir les exposants</a>
+                <a
+                    href="/exposants"
+                    class="card__cta"
+                >AVoir les exposants</a>
             </section>
             <section class="second__card">
                 <h3 class="card__header">Prix?</h3>
@@ -76,7 +66,10 @@
                     Garderie pour les
                     enfants sur
                     place.</p>
-                <a href="/billetterie" class="card__cta">Acheter des places</a>
+                <a
+                    href="/billetterie"
+                    class="card__cta"
+                >Acheter des places</a>
             </section>
         </div>
     </section>

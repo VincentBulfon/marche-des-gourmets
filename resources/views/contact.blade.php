@@ -1,7 +1,6 @@
 @extends('_layout')
 @section('main')
 <div class="header__landing header__landing--low header__landing--con">
-
 </div>
 </header>
 <main class="main">
@@ -11,25 +10,48 @@
                 Une question? Besion d'une information?
             </h2>
             <p class="first__about">
-                Vous avez une <strong class="strong">question</strong> ou besoin d'une <strong class="strong">information?</strong> N'hésitez pas à nous écrire! Si vous souahiter être
-                <strong class="strong"> exposant,</strong> cela se passe <span class="strong"><a href="/devenir-exposant">ici.</a></span>
+                Vous avez une <strong class="strong">question</strong> ou besoin d'une <strong
+                    class="strong">information?</strong> N'hésitez pas à nous écrire! Si vous souahiter être
+                <strong class="strong"> exposant,</strong> cela se passe <span class="strong"><a
+                        href="{{route('became')}}"
+                    >ici.</a></span>
             </p>
         </div>
         <div class="bg">
             <div class="form__container">
-                <form action="" class="contact__form form">
+                <form
+                    id="messageForm"
+                    action="{{route('send_message')}}"
+                    method="POST"
+                    class="contact__form form"
+                >
+                    @csrf
                     <h3 class="tird__subtitle subtitle">Nous contacter</h3>
-                    <label for="name" class="label">Nom&nbsp;:</label>
-                    <input class="input" type="text" name="name" id="name">
-                    <label class="label" for="firstname">Prénom&nbsp;:</label>
-                    <input class="input" type="text" name="firstname" id="firstname">
-                    <label for="email">Email&nbsp;:</label>
-                    <input type="email" name="email" id="email" class="input">
-                    <label class="label" for="phone">Téléphone&nbsp;:</label>
-                    <input class="input" type="text" name="phone" id="phone">
-                    <label class="label" for="message">Message&nbsp;:</label>
-                    <textarea class="input textarea" name="message" id="message" cols="10" rows="10"></textarea>
-                    <input type="submit" value="Envoyer" class="cta cta--form">
+                    @if(session()->has('status'))
+                    <p class="sucessMessage">
+                        {{ session()->get('status') }}
+                    </p>
+                    @endif
+                    @csrf
+                    @include('parts.personinfos')
+                    <label
+                        class="label"
+                        for="message"
+                    >Message&nbsp;:</label>
+                    <textarea
+                        class="input textarea @if($errors->has('message')) inputError @endif"
+                        name="message"
+                        id="message"
+                        cols="10"
+                        rows="10"
+                    >{{old('message')}}</textarea>
+                    @error('message')
+                    <p class="errorMessage">{{ $message }}</p> @enderror
+                    <input
+                        type="submit"
+                        value="Envoyer"
+                        class="cta cta--form"
+                    >
                 </form>
                 <dl class="main__infos">
                     <dt class=" sro main__definition">Email</dd>
@@ -46,10 +68,15 @@
             <section class="second__card ">
                 <h3 class="card__header">Quand?</h3>
                 <ol class="card__dates">
-                    <li class="card__date">Le<span class="card__bold"> 27</span> mars de <span class="card__bold">12h à 22h</span></li>
-                    <li class="card__date">Le<span class="card__bold"> 28</span> mars de <span class="card__bold">12h à 20h</span></li>
+                    <li class="card__date">Le<span class="card__bold"> 27</span> mars de <span class="card__bold">12h à
+                            22h</span></li>
+                    <li class="card__date">Le<span class="card__bold"> 28</span> mars de <span class="card__bold">12h à
+                            20h</span></li>
                 </ol>
-                <a href="/billetterie" class="card__cta">Acheter des places</a>
+                <a
+                    href="/billetterie"
+                    class="card__cta"
+                >Acheter des places</a>
             </section>
             <section class="second__card">
                 <h3 class="card__header">Où?</h3>
@@ -57,13 +84,19 @@
                 </p>
                 <p class="card__content"><strong class="card__regular">Esplanade du Val St-Lambert BE 4100
                         Seraing</strong></p>
-                <a href="#" class="card__cta">Voir le trajet sur Google maps</a>
+                <a
+                    href="#"
+                    class="card__cta"
+                >Voir le trajet sur Google maps</a>
             </section>
             <section class="second__card">
                 <h3 class="card__header">Qui?</h3>
                 <p class="card__content">Un total de<span class="card__bold">30 exposants</span>des "métier de
                     bouche" choisis par nos soins.</p>
-                <a href="/exposants" class="card__cta">AVoir les exposants</a>
+                <a
+                    href="/exposants"
+                    class="card__cta"
+                >AVoir les exposants</a>
             </section>
             <section class="second__card">
                 <h3 class="card__header">Prix?</h3>
@@ -72,7 +105,10 @@
                     Garderie pour les
                     enfants sur
                     place.</p>
-                <a href="/billetterie" class="card__cta">Acheter des places</a>
+                <a
+                    href="/billetterie"
+                    class="card__cta"
+                >Acheter des places</a>
             </section>
         </div>
     </section>

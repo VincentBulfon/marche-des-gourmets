@@ -1,4 +1,6 @@
 <div class="second__exhibs second__exhibs--filtred">
+
+    @if($data->first())
     @foreach($data as $exhib)
     <section class="exhib">
         <h3><a
@@ -9,11 +11,9 @@
                 <span class="sro">Voir le site/page facebook</span>
                 {{$exhib->company_name}}</a></h3>
         <div class="exhib__about">
-            <div><span class="exhib__info">A long text to test if it fits in this exhibitor card. And it fiets
-                    very
-                    well. Max 100 characters.</span>
-                <span class="exhib__info exhib__info--location exhib__info--precise">{{$exhib->region->region}}</span>
+            <div><span class="exhib__info">{{$exhib->about}}</span>
                 <span class="exhib__info exhib__info--location">{{$exhib->region->country}}</span>
+                <span class="exhib__info exhib__info--location exhib__info--precise">{{$exhib->region->region}}</span>
             </div>
             </ul>
             <ul class="exhib__tags">
@@ -26,8 +26,13 @@
             </ul>
         </div>
     </section>
+    <!-- TODO pagination -->
     @endforeach
+    @else
+    <p class="empty">Aucuns éléments ne corespond à ces criètéres.</p>
+    @endif
 
+    @if($data->first())
     <div class="pagination">
         <a
             href="#"
@@ -58,4 +63,5 @@
             class="pagination__next"
         >Suivant</a>
     </div>
+    @endif
 </div>

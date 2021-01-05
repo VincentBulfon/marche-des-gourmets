@@ -15,18 +15,23 @@ class CreateForeignKeys extends Migration
     {
         Schema::table('exhibitor_tags', function (Blueprint $table) {
             $table->foreign('exhibitor_id')->references('id')->on('exhibitors')
-            ->onDelete('no action')
+            ->onDelete('cascade')
             ->onUpdate('no action');
         });
         Schema::table('exhibitor_tags', function (Blueprint $table) {
             $table->foreign('tag_id')->references('id')->on('tags')
-            ->onDelete('no action')
+            ->onDelete('cascade')
             ->onUpdate('no action');
         });
         Schema::table('exhibitors', function (Blueprint $table) {
             $table->foreign('region_id')->references('id')->on('regions')
-                ->onDelete('no action')
+                ->onDelete('cascade')
                 ->onUpdate('no action');
+        });
+        Schema::table('tickets', function (Blueprint $table) {
+            $table->foreign('customer_id')->references('id')->on('customers')
+           ->onDelete('cascade')
+           ->onUpdate('no action');
         });
     }
 

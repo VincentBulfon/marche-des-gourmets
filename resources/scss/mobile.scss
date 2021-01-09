@@ -8,6 +8,7 @@ a {
         color: $orange;
     }
 }
+
 .main {
     &__first {
         &__bg {
@@ -114,19 +115,32 @@ strong {
     box-shadow: 0 2px 10px rgba($color: #000000, $alpha: 0.14);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
     &:hover {
+        .st1 {
+            fill: white;
+        }
+        picto--filter {
+            stroke: white;
+        }
         //color
         color: #fffcf1;
         //other
         box-shadow: 0 2px 10px rgba($color: #000000, $alpha: 0.28);
     }
 }
-.picto {
+.picto,
+.picto--vert {
     display: inline-block;
     margin-right: 0.438em;
-    width: 16px;
+    width: 17px;
     vertical-align: sub;
+}
+.picto-r {
     transform: rotate(45deg);
 }
+.picto--filter {
+    margin: 0;
+}
+
 .promo {
     //display
     display: grid;
@@ -155,7 +169,7 @@ strong {
         right: 0;
         width: 50vh;
         margin: auto;
-        opacity: 15%;
+        opacity: 20%;
     }
 }
 .second {
@@ -455,10 +469,14 @@ input[type="submit"] {
         clip-path: polygon(100% 0%, 0 0%, 50% 100%);
     }
 }
-
+.form--infos {
+    margin-top: 2.424em;
+    color: $midgreen;
+}
 .label--checkbox {
     grid-column: 1/2;
     margin-bottom: 0;
+    vertical-align: sub;
 }
 .checkbox {
     grid-column: 2/3;
@@ -526,7 +544,27 @@ select::-ms-expand {
 .cta--form {
     margin-top: 1.728em; //27.648px
 }
-
+.cta--form {
+    margin-left: 0;
+    margin-right: 0;
+}
+.picto--filter {
+    position: relative;
+    margin-right: -17px;
+    margin-bottom: -30px;
+    left: 90px;
+    width: 24px;
+    stroke: #eacc61;
+}
+.picto--s {
+    left: 75px;
+}
+.no__script,
+.submit__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .fieldset {
     &__label {
         display: flex;
@@ -604,7 +642,6 @@ select::-ms-expand {
 .page {
     display: inline-block;
     width: 23px;
-    line-height: 23px;
     @include fontSize(16px);
     text-align: center;
     color: $midgreen;
@@ -692,4 +729,33 @@ select::-ms-expand {
     grid-column: 1/4;
     margin: 0 auto;
     @include fontSize(13.333px);
+}
+#currentpage--footer,
+#currentpage {
+    text-decoration: none;
+    color: $orange;
+    &::after {
+        left: 0%;
+        width: 100%;
+        background-color: $orange;
+    }
+}
+
+.masonry {
+    columns: 1;
+    column-gap: 10px;
+}
+
+.masonry__item {
+    height: auto;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+.total--block {
+    padding: 0 6.35%;
+}
+.total__price--block {
+    display: block;
 }

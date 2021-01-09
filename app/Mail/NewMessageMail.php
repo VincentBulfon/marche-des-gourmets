@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Config;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -29,6 +30,8 @@ class NewMessageMail extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->from('vincent.bulfon@student.hepl.be')->view('emails.newMessage');
+        $senderEmail = Config::where('config_name', 'market_email')->get()->first()->value;
+
+        return $this->from($senderEmail)->view('emails.newMessage');
     }
 }

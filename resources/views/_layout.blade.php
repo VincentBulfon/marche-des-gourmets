@@ -9,20 +9,34 @@
         />
         <meta
             name="description"
-            content=""
+            content="Marché des gourmets, marché de producteurs locaux. Il se déroule dans la région liégeoise. Divers services sont proposé tels qu'un garderie pour les enfants et un restaurant tenu par les bénévoles du Rotary"
         />
         <meta
             name="keywords"
-            content=""
+            content="marché, local, producteurs locaux, rotary, rotary club de flémalle, roatary flemalle, marché des gourmets, marché gourmets, produteurs, producteurs locaux"
         />
+        <meta
+            name="author"
+            content="rotary club de flémalle"
+        >
         <link
             rel="stylesheet"
             href="{{asset('css/app.css')}}"
         >
+        <script
+            src="{{ asset('js/app.js') }}"
+            defer
+        ></script>
+        @yield('page-style')
+        @yield('page-script')
+
         <title>Le marché des gourmets</title>
     </head>
 
-    <body>
+    <body
+        itemscope
+        itemtype="https://schema.org/FoodEvent"
+    >
         <header class="header">
             <h1 class="header__title">
                 <a
@@ -35,7 +49,20 @@
                 for="menu"
                 class="header__toggle"
             >
-                <div class="toggle__icon">SVG</div>
+                <div class="toggle__icon"><svg
+                        width="24"
+                        height="24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M4 6h16M4 12h16M4 18h16"
+                            stroke="#eacc61"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg></div>
                 <span class="sro">Afficher/Masquer le menu</span>
             </label>
             <input
@@ -48,34 +75,34 @@
                 <h2 class="sro">Navigation principale</h2>
 
                 <ul class="nav__list">
-                    <li><a
+                    <li><a {{request()->routeIs('home') ? "id=currentpage" : ""}}
                             class="nav__item"
                             href="/"
-                        >Acceuil</a></li>
-                    <li><a
+                            >Acceuil</a></li>
+                    <li><a {{request()->routeIs('who we are') ? "id=currentpage" : ""}}
                             class="nav__item"
                             href="/qui-sommes-nous"
-                        >Qui somme-nous</a></li>
-                    <li><a
+                            >Qui somme-nous</a></li>
+                    <li><a {{request()->routeIs('became') ? "id=currentpage" : ""}}
                             class="nav__item"
                             href="/exposants"
-                        >Exposants</a></li>
+                            >Exposants</a></li>
                     <li><a
                             class="nav__item"
                             href="/exposants#became"
                         >Devenir exposant</a></li>
-                    <li><a
+                    <li><a {{request()->routeIs('contact') ? "id=currentpage" : ""}}
                             class="nav__item"
                             href="contact"
-                        >Contact</a></li>
-                    <li><a
+                            >Contact</a></li>
+                    <li><a {{request()->routeIs('ticketing') ? "id=currentpage" : ""}}
                             class="nav__item"
                             href="billetterie"
-                        >Billetterie</a></li>
-                    <li><a
+                            >Billetterie</a></li>
+                    <li><a {{request()->routeIs('edition') ? "id=currentpage" : ""}}
                             class="nav__item"
                             href="édition"
-                        >Édition</a></li>
+                            >Édition</a></li>
                 </ul>
             </nav>
 

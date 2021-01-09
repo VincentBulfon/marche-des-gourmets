@@ -1,36 +1,37 @@
 <label
 	for="name"
 	class="label"
->Nom&nbsp;:</label>
+>Nom&nbsp;:*</label>
 <input
+	required
 	class="input @if($errors->has('name')) inputError @endif"
 	type="text"
 	name="name"
 	id="name"
-	value="{{old('name')}}"
 	autocomplete="off"
+	value="{{old('name')}}"
 >
 @error('name') <p class="errorMessage">{{ $message }}</p> @enderror
 <label
 	class="label"
 	for="firstname"
->Prénom&nbsp;:</label>
+>Prénom&nbsp;:*</label>
 <input
+	required
 	class="input @if($errors->has('firstname')) inputError @endif"
 	type="text"
 	name="firstname"
 	id="firstname"
-	value="{{old('firstname')}}"
 	autocomplete="off"
->
-@error('firstname')
-<p class="errorMessage">{{ $message }}</p> @enderror
-
+	value="{{old('firstname')}}"
+/>
+@error('firstname') <p class="errorMessage">{{ $message }}</p> @enderror
 <label
 	class="label"
 	for="phone"
->Téléphone&nbsp;:</label>
+>Téléphone&nbsp;:*</label>
 <input
+	required
 	class="input @if($errors->has('phone')) inputError @endif"
 	type="text"
 	name="phone"
@@ -42,8 +43,9 @@
 <label
 	class="label"
 	for="email"
->Email&nbsp;:</label>
+>Email&nbsp;:*</label>
 <input
+	required
 	class="input @if($errors->has('email')) inputError @endif"
 	type="text"
 	name="email"

@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Benjacho\BelongsToManyField\BelongsToManyField;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Text;
@@ -14,6 +15,17 @@ class Exhibitors extends Resource
      * @var string
      */
     public static $model = \App\Models\Exhibitor::class;
+    /**
+     * The logical group associated with the resource.
+     *
+     * @var string
+     */
+    public static $group = 'Exposants';
+
+    public static function label()
+    {
+        return 'Liste des exposants';
+    }
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -28,7 +40,6 @@ class Exhibitors extends Resource
      * @var array
      */
     public static $search = [
-        'id',
         'company_name'
     ];
 
@@ -41,14 +52,19 @@ class Exhibitors extends Resource
     public function fields(Request $request)
     {
         return [
-            Boolean::make('Validé', 'is_draft')
+            Boolean::make('Validé', 'validated')
             ->sortable()
             ->rules('required', 'boolean'),
             Text::make('Nom de la société', 'company_name')
                 ->sortable()
                 ->rules('required', 'max:255'),
+            Text::make('Prénom', 'firstname')->rules('required', 'max:255'),
+            Text::make('Nom', 'lastname')->rules('required', 'max:255'),
+            Text::make('Email', 'email')->rules('required', 'max:255', 'email'),
+            Text::make('A propos', 'about')->rules('required', 'max:255')->hideFromIndex(),
             Boolean::make('Est bio', 'is_bio')->rules('required', 'boolean'),
-            Text::make('Lien vers le site/page facebook', 'link')->rules('url'),
+            Text::make('Lien vers le site/page facebook', 'link')->rules('url')->hideFromIndex(),
+            BelongsToManyField::make('tags')->hideFromIndex(),
         ];
     }
 

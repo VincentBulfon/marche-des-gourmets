@@ -11,7 +11,6 @@ class Exhibitors extends Component
     use WithPagination;
 
     public $rq;
-    public $data;
     public $region = 'all';
     public $tag = 'all';
     public $isBio = false;
@@ -37,16 +36,19 @@ class Exhibitors extends Component
     public function updateTag($tag)
     {
         $this->tag = $tag;
+        $this->resetPage();
     }
 
     public function updateRegion($region)
     {
         $this->region = $region;
+        $this->resetPage();
     }
 
     public function setBio()
     {
         $this->isBio = !$this->isBio;
+        $this->resetPage();
     }
 
     public function render()
@@ -65,9 +67,8 @@ class Exhibitors extends Component
         if ($this->isBio === true) {
             $request = $request->where('is_bio', true);
         }
-        // $this->data = $request->orderBy('company_name', 'ASC')->paginate(10)->items();
-        $this->data = $request->where('validated', true)->orderBy('company_name', 'ASC')->get();
+        $data = $request->where('validated', true)->orderBy('company_name', 'ASC')->paginate(9);
 
-        return view('livewire.exhibitors', ['data' => $this->data, 'rq' => $this->rq]);
+        return view('livewire.exhibitors', ['data' => $data, 'rq' => $this->rq]);
     }
 }

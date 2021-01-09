@@ -83,7 +83,7 @@ class ExhibitorController extends Controller
             }
         }
         ExhibitorAdded::dispatch($exhibitor);
-        $request->session()->flash('status', 'Votre enregistrement est réussi! Vos données seront traitées dans la jours qui viennes. Un email de conformation vous à été envoyé.');
+        $request->session()->flash('status', 'Votre enregistrement est réussi! Vos données seront traitées dans la jours qui viennes. Vous serez contacté par un membre de notre équipe pour le suite des démarches.');
 
         return redirect('/exposants#became');
     }

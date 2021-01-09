@@ -3,34 +3,47 @@
 		<nav class="footer__nav">
 			<h2 class="sro">navigation secondaire</h2>
 			<ol class="footer__nav__list">
-				<li class="footer__link__container"><a
+				<li class="footer__link__container">
+					<a {{request()->routeIs('home') ? "id=currentpage--footer" : ""}}
 						class="footer__nav__item"
 						href="/"
-					>Acceuil</a></li>
-				<li class="footer__link__container"><a
+						>Acceuil</a>
+				</li>
+				<li class="footer__link__container">
+					<a {{request()->routeIs('who we are') ? "id=currentpage--footer" : ""}}
 						class="footer__nav__item"
+
 						href="/qui sommes-nous"
-					>Qui somme-nous</a></li>
-				<li class="footer__link__container"><a
+						>Qui somme-nous</a>
+				</li>
+				<li class="footer__link__container">
+					<a {{request()->routeIs('became') ? "id=currentpage--footer" : ""}}
 						class="footer__nav__item"
 						href="/exposants"
-					>Exposants</a></li>
+						>Exposants</a>
+				</li>
 				<li class="footer__link__container"><a
 						class="footer__nav__item"
 						href="devenir exposant"
 					>Devenir exposant</a></li>
-				<li class="footer__link__container"><a
+				<li class="footer__link__container">
+					<a {{request()->routeIs('contact') ? "id=currentpage--footer" : ""}}
 						class="footer__nav__item"
 						href="contact"
-					>Contact</a></li>
-				<li class="footer__link__container"><a
+						>Contact</a>
+				</li>
+				<li class="footer__link__container">
+					<a {{request()->routeIs('ticketing') ? "id=currentpage--footer" : ""}}
 						class="footer__nav__item"
 						href="billetterie"
-					>Billetterie</a></li>
-				<li class="footer__link__container"><a
+						>Billetterie</a>
+				</li>
+				<li class="footer__link__container">
+					<a {{request()->routeIs('edition') ? "id=currentpage--footer" : ""}}
 						class="footer__nav__item"
 						href="édition"
-					>Édition</a></li>
+						>Édition</a>
+				</li>
 			</ol>
 		</nav>
 		<div class="footer__separator"></div>

@@ -9,6 +9,8 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "benjacho/belongs-to-many-field": "^1.8",
+        "ebess/advanced-nova-media-library": "^3.4",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
@@ -16,9 +18,11 @@
         "laravel/nova": "*",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.3",
+        "spatie/laravel-medialibrary": "^9.0.0",
         "stripe/stripe-php": "^7.67",
         "whitecube/nova-flexible-content": "^0.2.6",
-        "whitecube/nova-page": "^0.2.5"
+        "whitecube/nova-page": "^0.2.5",
+        "theme/groumet": "*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
@@ -68,6 +72,26 @@
         {
             "type": "path",
             "url": "./nova"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Groumet"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Groumet"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Groumet"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Groumet"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Groumet"
         }
     ]
 }

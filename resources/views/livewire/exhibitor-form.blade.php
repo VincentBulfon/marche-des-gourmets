@@ -60,11 +60,26 @@
 
         </div>
     </section>
-    <noscript>
+    <noscript class="no__script">
+        <svg
+            class="picto picto--filter"
+            width="24"
+            height="24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M3 4l1-1h16l1 1v3s0 0 0 0l-7 7s0 0 0 0v3l-4 4v-7s0 0 0 0L3 7s0 0 0 0V4z"
+                stroke=" #eacc61"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
         <input
             type="submit"
             value="Filtrer"
-            class="cta cta--form"
+            class="cta cta--form cta--noscript"
         >
     </noscript>
 </form>

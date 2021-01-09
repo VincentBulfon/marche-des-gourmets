@@ -26,12 +26,12 @@ class TicketingRequest extends FormRequest
             'name.required' => 'Votre nom est requis.',
             'firstname.required' => 'Votre prénom est requis.',
             'phone.required' => 'Votre numéro de téléphone est requis.',
-            'phone.regex' => 'Votre numéro de téléphone doit être dans les formats standards européens.',
+            'phone.regex' => 'Votre numéro de téléphone ne doit comporeter que des chiffres, des parenthères et symboles "+","-".',
             'phone.min' => 'Votre numéro de téléphone doit comporter au moins 9 carctères.',
             'email.required' => 'Votre adresse email est requise.',
             'email.email' => 'Votre adresse email doit être dans un format valide.',
-            'quantity.required' => 'Le nombre de billets désiré est requis.',
-            'quantity.min' => 'Le nombre de billets doit être de 1 au minilum.',
+            'tickets.required' => 'Le nombre de billets désiré est requis.',
+            'tickets.min' => 'Le nombre de billets doit être de 1 au minilum.',
         ];
     }
 
@@ -49,7 +49,7 @@ class TicketingRequest extends FormRequest
             'firstname' => 'required',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:9',
             'email' => 'required|email',
-            'quantity' => 'required|numeric|min:1|max:10000',
+            'tickets' => 'required|numeric|min:1|max:10000',
         ];
     }
 }

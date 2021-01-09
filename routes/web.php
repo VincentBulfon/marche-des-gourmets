@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EditionController;
 use App\Http\Controllers\ExhibitorController;
 use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
@@ -29,13 +31,16 @@ Route::get(
 )->template(\App\Nova\Templates\Exhibitors::class)->name('became');
 Route::get('/contact', function () {
     return view('contact');
-});
+})->template(\App\Nova\Templates\Contact::class)->name('contact');
 Route::get('/billetterie ', function () {
     return view('ticketing');
-});
-Route::get('/édition', function () {
-    return view('edition');
-});
+})->template(\App\Nova\Templates\Ticketing::class)->name('ticketing');
+Route::get('/édition', [EditionController::class, 'index'])->name('edition');
+
+Route::get(
+    '/checkout',
+    [ CheckoutController::class, 'checkout']
+)->name('checkout');
 
 //post routes
 Route::post(

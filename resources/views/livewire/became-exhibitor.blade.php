@@ -26,7 +26,7 @@
             <label
                 for="company_name"
                 class="label"
-            >Nom de l'entreprise&nbsp;:</label>
+            >Nom de l'entreprise&nbsp;:*</label>
             <input
                 class="input @if($errors->has('company_name')) inputError @endif"
                 type="text"
@@ -34,12 +34,13 @@
                 id="company_name"
                 value="{{old('company_name')}}"
                 autocomplete="off"
+                required
             >
             @error('company_name') <p class="errorMessage">{{ $message }}</p> @enderror
             <label
                 for="company_link"
                 class="label"
-            >Lien vers le site web/facebook&nbsp;:</label>
+            >Lien vers le site web/facebook&nbsp;:*</label>
             <input
                 class="input @if($errors->has('company_link')) inputError @endif"
                 type="text"
@@ -47,13 +48,15 @@
                 id="company_link"
                 value="{{old('company_link')}}"
                 autocomplete="off"
+                placeholder="http://exemple.com"
+                required
             >
             @error('company_link')
             <p class="errorMessage">{{ $message }}</p> @enderror
             <label
                 class="label"
                 for="about"
-            >Description du/des produit(s)&nbsp;:</label>
+            >Description du/des produit(s) (maximum 100 charactères)&nbsp;:*</label>
             <textarea
                 class="input textarea @if($errors->has('about')) inputError @endif"
                 name="about"
@@ -68,7 +71,7 @@
             <label
                 class="label"
                 for="country"
-            >Pays représenté&nbsp;:</label>
+            >Pays représenté&nbsp;:*</label>
             <input
                 class="select @if($errors->has('country')) inputError @endif"
                 name="country"
@@ -88,7 +91,7 @@
             <label
                 for="region"
                 class="label"
-            >Ville représentée&nbsp;:</label>
+            >Ville représentée&nbsp;:*</label>
             <input
                 class="input @if($errors->has('region')) inputError @endif"
                 type="text"
@@ -110,7 +113,7 @@
 
             </datalist>
             <fieldset class="fieldset">
-                <legend class="fieldset__legend">Catégories de produits vendus&nbsp;:
+                <legend class="fieldset__legend">Catégories de produits vendus&nbsp;:*
                 </legend class="fieldset__label label">
 
                 @foreach($tags as $tag)
@@ -153,10 +156,26 @@
                 >Bio</label>
             </fieldset>
         </section>
-        <input
-            type="submit"
-            value="Soumettre"
-            class="cta cta--form cta--grid"
-        >
+        <p class="label form--infos">Les champs maqués d'un "*" sont obligatoires.</p>
+        <div class="submit__container submit__container--grid"><svg
+                class="picto picto--filter picto--s"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                ></path>
+            </svg>
+            <input
+                type="submit"
+                value="Soumettre"
+                class="cta cta--form cta--grid"
+            >
+        </div>
     </form>
 </section>

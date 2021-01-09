@@ -20,7 +20,7 @@ class Config extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'config_name';
 
     /**
      * The columns that should be searched.
@@ -28,8 +28,13 @@ class Config extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'config_name',
     ];
+
+    public static function label()
+    {
+        return 'Configuration';
+    }
 
     /**
      * Get the fields displayed by the resource.
@@ -40,7 +45,7 @@ class Config extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make(__('ID'), 'id')->sortable(),
+            ID::make(__('ID'), 'id')->sortable()->hideFromIndex(),
             Text::make('nom de la clé de configuration', 'config_name')->sortable()->withMeta(['extraAttributes' => [
                 'readonly' => true
             ]]),

@@ -1,0 +1,23 @@
+{
+    "title": "Billetterie",
+    "created_at": "2021-01-06 11:00:00",
+    "updated_at": "2021-01-06 13:32:27",
+    "attributes": {
+        "ticketing_intro": [
+            {
+                "layout": "ticketing_bloc",
+                "key": "QfppRtDb9RzbJh2a",
+                "attributes": {
+                    "content": "**Entr\u00e9e \u00e0 6\u20ac**, gratuite pour les moins de **16 ans.** **Garderie** pr\u00e9vue pour les enfants. "
+                }
+            },
+            {
+                "layout": "ticketing_bloc",
+                "key": "orOGnOQG7Wu0YXlQ",
+                "attributes": {
+                    "content": "N'h\u00e9sitez pas a aussi r\u00e9server pour vos amis."
+                }
+            }
+        ]
+    }
+}

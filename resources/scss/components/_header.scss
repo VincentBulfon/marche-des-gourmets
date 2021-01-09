@@ -64,6 +64,21 @@ body {
         background-repeat: no-repeat;
         background-clip: border-box;
         background-size: cover;
+        &--wwa {
+            background-image: url("../assets/banner--group--tall.jpeg");
+        }
+        &--ex {
+            background-image: url("../assets/exposants.jpg");
+        }
+        &--con {
+            background-image: url("../assets/contact_us.jpg");
+        }
+        &--tik {
+            background-image: url("../assets/market.jpg");
+        }
+        &--ed {
+            background-image: url("../assets/edition.jpg");
+        }
     }
 }
 

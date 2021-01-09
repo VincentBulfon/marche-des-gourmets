@@ -3,7 +3,10 @@
 
 
 @section('main')
-<div class="header__landing">
+<div
+    class="header__landing"
+    itemprop="name"
+>
     <p class="landing__intro">Le {{Page::get('edition')}}<span class="exposure">e</span> marché <br> des <span
             class="landing__manuscrit manuscrit"
         >Gourmets</span></p>
@@ -18,16 +21,19 @@
             <div class="intro__wrapper">
 
                 @foreach (Page::flexible('intro') as $layout)
-                <div class="intro__main">
+                <div
+                    class="intro__main"
+                    itemprop="subjectOf"
+                >
                     @markdown($layout->content)
                 </div>
                 @endforeach
-                <!-- <div class="intro__main"> //content here </div> -->
+
                 <a
                     class="intro__cta cta"
                     href=""
                 ><svg
-                        class="picto"
+                        class="picto picto-r"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -50,27 +56,27 @@
         <div class="promo">
             <img
                 class="promo__item"
-                src="https://source.unsplash.com/random/1920x1080"
-                alt=""
-                srcset=""
+                src="{{url('/assets/beer-374.jpeg')}}"
+                alt="Verre de bière avec du saucisson et des cacahuètes"
+                srcset="{{url('/assets/beer-374.jpeg')}} 374w, {{url('/assets/beer-297.jpeg')}} 297w, {{url('/assets/beer-160.jpeg')}} 160w"
             >
             <img
                 class="promo__item"
-                src="https://source.unsplash.com/random/1920x1080"
-                alt=""
-                srcset=""
+                src="{{url('/assets/cheese-374.jpeg')}}"
+                alt="Fromages empilés les uns sur les autres"
+                srcset="{{url('/assets/cheese-374.jpeg')}} 374w, {{url('/assets/cheese-297.jpeg')}} 297w, {{url('/assets/cheese-160.jpeg')}} 160w"
             >
             <img
                 class="promo__item"
-                src="https://source.unsplash.com/random/1920x1080"
-                alt=""
-                srcset=""
+                src="{{url('/assets/man-market-374.jpeg')}}"
+                alt="homme tenant un stand à un marché"
+                srcset="{{url('/assets/man-market-374.jpeg')}} 374w, {{url('/assets/man-market-297.jpeg')}} 297w, {{url('/assets/man-market-160.jpeg')}} 160w"
             >
             <img
                 class="promo__item"
-                src="https://source.unsplash.com/random/1920x1080"
-                alt=""
-                srcset=""
+                src="{{url('/assets/food-stage-374.jpeg')}}"
+                alt="étale de nourriture"
+                srcset="{{url('/assets/food-stage-374.jpeg')}} 374w, {{url('/assets/food-stage-297.jpeg')}} 297w, {{url('/assets/food-stage-160.jpeg')}} 160w"
             >
         </div>
     </section>
@@ -80,9 +86,15 @@
             <section class="second__card second__card--right">
                 <h3 class="card__header">Quand?</h3>
                 <ol class="card__dates">
-                    <li class="card__date">Le <span class="card__bold">27</span> mars de <span class="card__bold">12h à
+                    <li
+                        class="card__date"
+                        itemprop="startDate"
+                    >Le <span class="card__bold">27</span> mars de <span class="card__bold">12h à
                             22h</span></li>
-                    <li class="card__date">Le <span class="card__bold">28</span> mars de <span class="card__bold">12h à
+                    <li
+                        class="card__date"
+                        itemprop="endDate"
+                    >Le <span class="card__bold">28</span> mars de <span class="card__bold">12h à
                             20h</span></li>
                 </ol>
                 <a
@@ -94,7 +106,10 @@
                 <h3 class="card__header">Où?</h3>
                 <p class="card__content">@option('Infos.placeName')
                 </p>
-                <p class="card__content"><strong class="card__regular"> @option('Infos.placeAddress')
+                <p class="card__content"><strong
+                        class="card__regular"
+                        itemprop="location"
+                    > @option('Infos.placeAddress')
 
                     </strong></p>
                 <a
@@ -130,9 +145,13 @@
             >
         </div>
     </section>
-    <section class="main__third">
+    <section
+        class="main__third"
+        itemprop="sponsor"
+    >
         <h2 class="third__title title">Notre partenaire</h2>
         <img
+            itemprop="image"
             src="{{asset('assets/logo_province.svg')}}"
             alt="logo de la province de Liège"
             class="third__partner"

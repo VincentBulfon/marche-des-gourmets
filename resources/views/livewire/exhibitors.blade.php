@@ -2,7 +2,10 @@
 
     @if($data->first())
     @foreach($data as $exhib)
-    <section class="exhib">
+    <section
+        class="exhib"
+        itemprop="performer"
+    >
         <h3><a
                 href="{{$exhib->link}}"
                 class="exhib__title"
@@ -32,36 +35,6 @@
     <p class="empty">Aucuns éléments ne corespond à ces criètéres.</p>
     @endif
 
-    @if($data->first())
-    <div class="pagination">
-        <a
-            href="#"
-            class="pagination__previous"
-        >Précédent</a>
-        <a
-            href="#"
-            class="page"
-        >1</a>
-        <a
-            href="#"
-            class="page"
-        >2</a>
-        <a
-            href="#"
-            class="page page--current"
-        >3</a>
-        <a
-            href="#"
-            class="page"
-        >4</a>
-        <a
-            href="#"
-            class="page"
-        >5</a>
-        <a
-            href="#"
-            class="pagination__next"
-        >Suivant</a>
-    </div>
-    @endif
+    {{$data->links('parts.pagination')}}
+
 </div>

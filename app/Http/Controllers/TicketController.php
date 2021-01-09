@@ -6,13 +6,14 @@ use App\Http\Requests\TicketingRequest;
 use App\Models\Config;
 use App\Models\Customer;
 use App\Models\Ticket;
+use Stripe\Stripe;
 
 class TicketController extends Controller
 {
     public function store(TicketingRequest $request)
     {
         $validatedData = $request->validated();
-        $price = $validatedData['quantity'] * Config::where('config_name', 'ticket_price')->first()->value;
+        $price = $validatedData['tickets'] * Config::where('config_name', 'ticket_price')->first()->value;
 
         /**
          *
@@ -24,7 +25,7 @@ class TicketController extends Controller
         function storeTickets(Customer $customer, array $validatedData, $price): Ticket
         {
             Ticket::create([
-                'quantity' => $validatedData['quantity'],
+                'quantity' => $validatedData['tickets'],
                 'price' => $price
             ]);
         };
@@ -39,11 +40,24 @@ class TicketController extends Controller
             ]);
         }
         $customer->tickets()->create([
-            'quantity' => $validatedData['quantity'],
+            'quantity' => $validatedData['tickets'],
             'price' => $price,
         ]);
         $request->session()->flash('status', 'Votre commande à bien été passée.');
+        session(['total' => $price]);
 
-        return redirect()->to('billetterie#ticketing');
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+        header('Content-Type: application/json');
+        $paymentIntent = \Stripe\PaymentIntent::create([
+            'amount' => round(session('total') * 100),
+            'currency' => 'eur',
+            // Verify your integration in this guide by including this parameter
+            'metadata' => ['integration_check' => 'accept_a_payment'],
+        ]);
+
+        return view('checkout.checkout', [
+            'clientSecret' => $paymentIntent->client_secret,
+            'total' => $price, 'nbrTickets' => $validatedData['tickets']
+        ]);
     }
 }

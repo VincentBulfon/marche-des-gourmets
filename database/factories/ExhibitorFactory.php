@@ -31,8 +31,9 @@ class ExhibitorFactory extends Factory
             'lastname' => $this->faker->lastName,
             'email' => $this->faker->email,
             'phone' => $this->faker->phoneNumber,
-            'is_draft' => $this->faker->boolean,
+            'validated' => $this->faker->boolean,
             'is_bio' => $this->faker->boolean,
+            'about' => $this->faker->text(80),
             'region_id' => $regions->random()->id,
         ];
     }

@@ -1,0 +1,13 @@
+ $table->text('date');
+            $table->text('location');
+            $table->integer('populartiy')->unsigned()->default(0);
+
+			//
+
+
+			 ID::make(__('ID'), 'id')->sortable()->hide(),
+            Images::make('Images', 'year-pictures')->withResponsiveImages()->rules('required'),
+            DateTime::make('Année', 'year')->format('yyyy')->sortable()->rules('required'),
+            Markdown::make('Écriver un texte definissant les dates', 'date')->hideFromIndex()->rules('required'),
+            Text::make('Entrez lieu de l\'évenement', 'location')->sortable()->rules('required'),
+            Text::make('Entrez le nombre de personnes ayant participé', 'populartiy')->sortable(),

@@ -23,8 +23,13 @@
             rel="stylesheet"
             href="{{asset('css/app.css')}}"
         >
+        <link
+            rel="shortcut icon"
+            href="{{asset('assets/favicon.jpeg')}}"
+            type="image/x-icon"
+        >
         <script
-            src="{{ asset('js/app.js') }}"
+            src="{{asset('js/app.js') }}"
             defer
         ></script>
         @yield('page-style')

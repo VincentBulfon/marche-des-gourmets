@@ -21,9 +21,13 @@
                 <dd class="edition__term"><strong class="strong">{{$year->populartiy}}</strong></dd>
             </dl>
             <div class="masonry">
+                @if($year->getMedia('tata'))
                 @foreach($year->getMedia('year-pictures') as $media)
                 {{$media()->lazy()->attributes(['class'=>'masonry__item'])}}
                 @endforeach
+                @else
+                <p>Aucunes photos à afficher pour cette déition</p>
+                @endif
             </div>
         </div>
     </section>

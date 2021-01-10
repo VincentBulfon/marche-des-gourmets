@@ -11,13 +11,13 @@
                 Edition précédente
             </h2>
             <dl class="edition__infos">
-                <dt class="edition__definition">Dates&nbsp;:</dt>
+                <dt class="edition__definition">Dates&nbsp;:&nbsp;</dt>
                 <dd class="edition__term">
                     @markdown($year->date)
                 </dd>
-                <dt class="edition__definition">Lieu&nbsp;:</dt>
+                <dt class="edition__definition">Lieu&nbsp;:&nbsp;</dt>
                 <dd class="edition__term"><strong class="strong">{{$year->location}}</strong></dd>
-                <dt class="edition__definition">Nombre de visiteurs&nbsp;:</dt>
+                <dt class="edition__definition">Nombre de visiteurs&nbsp;:&nbsp;</dt>
                 <dd class="edition__term"><strong class="strong">{{$year->populartiy}}</strong></dd>
             </dl>
             <div class="masonry">

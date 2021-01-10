@@ -36,7 +36,7 @@ class Infos extends Template
             Text::make('Adresse du lieu', 'placeAddress')->required(),
             Text::make('Lien Google maps vers le lieu', 'placeLink')->required(),
             Trix::make('informations sur le exposants', 'who')->required(),
-            Trix::make('Information sur le prix')->required(),
+            Trix::make('Information sur le prix', 'price')->required(),
         ];
     }
 

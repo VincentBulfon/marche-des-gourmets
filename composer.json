@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "benjacho/belongs-to-many-field": "^1.8",
+        "chris-ware/nova-clock-card": "^1.2",
         "ebess/advanced-nova-media-library": "^3.4",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
@@ -20,9 +21,9 @@
         "livewire/livewire": "^2.3",
         "spatie/laravel-medialibrary": "^9.0.0",
         "stripe/stripe-php": "^7.67",
+        "theme/groumet": "*",
         "whitecube/nova-flexible-content": "^0.2.6",
-        "whitecube/nova-page": "^0.2.5",
-        "theme/groumet": "*"
+        "whitecube/nova-page": "^0.2.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

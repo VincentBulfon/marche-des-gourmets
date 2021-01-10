@@ -12,13 +12,13 @@
             </h2>
             <dl class="edition__infos">
                 <dt class="edition__definition">Dates&nbsp;:</dt>
-                <dd class="edition__term"><strong class="strong">27</strong> au <strong class="strong">28 Mars</strong>
-                    2019
+                <dd class="edition__term">
+                    @markdown($year->date)
                 </dd>
                 <dt class="edition__definition">Lieu&nbsp;:</dt>
-                <dd class="edition__term"><strong class="strong">Abbaye de le Paix Dieu</strong></dd>
+                <dd class="edition__term"><strong class="strong">{{$year->location}}</strong></dd>
                 <dt class="edition__definition">Nombre de visiteurs&nbsp;:</dt>
-                <dd class="edition__term"><strong class="strong">2800</strong></dd>
+                <dd class="edition__term"><strong class="strong">{{$year->populartiy}}</strong></dd>
             </dl>
             <div class="masonry">
                 @foreach($year->getMedia('year-pictures') as $media)

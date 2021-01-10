@@ -46,11 +46,7 @@
 		</section>
 		<section class="second__card second__card--right">
 			<h3 class="card__header">Prix?</h3>
-			<p class="card__content">Entrée <strong class="card__bold">6€</strong> gratuit pour les moins de
-				16ans.
-				Garderie pour les
-				enfants sur
-				place.</p>
+			<div class="card__content"> @option('Infos.price')</div>
 			<a
 				href="/billetterie"
 				class="card__cta"
@@ -58,8 +54,9 @@
 		</section>
 		<img
 			class="main__second__bg main__second__bg--horizontal"
-			src="../assets/cheese_white_bg.png"
+			src="{{asset('assets/chees_white_bg-750.png')}}"
 			alt=""
+			srcset="{{asset('assets/chees_white_bg-500.png')}} 500w, {{asset('assets/chees_white_bg-750.png')}} 750w"
 		>
 	</div>
 </section>

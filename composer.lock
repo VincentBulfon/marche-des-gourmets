@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c0634ee7d1fd3a67a45ab0bdb913ee7",
+    "content-hash": "5ed5fd2c22629e61e29be2fca28d5454",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -280,6 +280,51 @@
                 "source": "https://github.com/cakephp/chronos"
             },
             "time": "2020-08-22T02:42:12+00:00"
+        },
+        {
+            "name": "chris-ware/nova-clock-card",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chris-ware/nova-clock-card.git",
+                "reference": "55a82d471e4c75c65ddc1ae6fe227aed09d48eeb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chris-ware/nova-clock-card/zipball/55a82d471e4c75c65ddc1ae6fe227aed09d48eeb",
+                "reference": "55a82d471e4c75c65ddc1ae6fe227aed09d48eeb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ChrisWare\\NovaClockCard\\CardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ChrisWare\\NovaClockCard\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova card to display the date and time.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/chris-ware/nova-clock-card/issues",
+                "source": "https://github.com/chris-ware/nova-clock-card/tree/master"
+            },
+            "time": "2018-12-09T19:46:22+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

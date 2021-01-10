@@ -13,7 +13,7 @@
 					<a {{request()->routeIs('who we are') ? "id=currentpage--footer" : ""}}
 						class="footer__nav__item"
 
-						href="/qui sommes-nous"
+						href="/qui-sommes-nous"
 						>Qui somme-nous</a>
 				</li>
 				<li class="footer__link__container">

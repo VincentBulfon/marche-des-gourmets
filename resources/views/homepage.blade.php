@@ -49,34 +49,34 @@
             </div>
             <img
                 class="main__first__bg"
-                src="../assets/meat_movement_white_bg.png"
-                alt=""
+                src="{{asset('assets/meat_movement_white_bg-750.jpg')}}"
+                alt="{{asset('assets/meat_movement_white_bg-500.jpg')}} 500w, {{asset('assets/meat_movement_white_bg-750.jpg')}} 750w"
             >
         </div>
         <div class="promo">
             <img
                 class="promo__item"
-                src="{{url('/assets/beer-374.jpeg')}}"
+                src="{{asset('/assets/beer-374.jpeg')}}"
                 alt="Verre de bière avec du saucisson et des cacahuètes"
-                srcset="{{url('/assets/beer-374.jpeg')}} 374w, {{url('/assets/beer-297.jpeg')}} 297w, {{url('/assets/beer-160.jpeg')}} 160w"
+                srcset="{{asset('/assets/beer-374.jpeg')}} 374w, {{asset('/assets/beer-297.jpeg')}} 297w, {{asset('/assets/beer-160.jpeg')}} 160w"
             >
             <img
                 class="promo__item"
-                src="{{url('/assets/cheese-374.jpeg')}}"
+                src="{{asset('/assets/cheese-374.jpeg')}}"
                 alt="Fromages empilés les uns sur les autres"
-                srcset="{{url('/assets/cheese-374.jpeg')}} 374w, {{url('/assets/cheese-297.jpeg')}} 297w, {{url('/assets/cheese-160.jpeg')}} 160w"
+                srcset="{{asset('/assets/cheese-374.jpeg')}} 374w, {{asset('/assets/cheese-297.jpeg')}} 297w, {{asset('/assets/cheese-160.jpeg')}} 160w"
             >
             <img
                 class="promo__item"
-                src="{{url('/assets/man-market-374.jpeg')}}"
+                src="{{asset('/assets/man-market-374.jpeg')}}"
                 alt="homme tenant un stand à un marché"
-                srcset="{{url('/assets/man-market-374.jpeg')}} 374w, {{url('/assets/man-market-297.jpeg')}} 297w, {{url('/assets/man-market-160.jpeg')}} 160w"
+                srcset="{{asset('/assets/man-market-374.jpeg')}} 374w, {{asset('/assets/man-market-297.jpeg')}} 297w, {{asset('/assets/man-market-160.jpeg')}} 160w"
             >
             <img
                 class="promo__item"
-                src="{{url('/assets/food-stage-374.jpeg')}}"
+                src="{{asset('/assets/food-stage-374.jpeg')}}"
                 alt="étale de nourriture"
-                srcset="{{url('/assets/food-stage-374.jpeg')}} 374w, {{url('/assets/food-stage-297.jpeg')}} 297w, {{url('/assets/food-stage-160.jpeg')}} 160w"
+                srcset="{{asset('/assets/food-stage-374.jpeg')}} 374w, {{asset('/assets/food-stage-297.jpeg')}} 297w, {{asset('/assets/food-stage-160.jpeg')}} 160w"
             >
         </div>
     </section>
@@ -128,11 +128,7 @@
             </section>
             <section class="second__card second__card--right">
                 <h3 class="card__header">Prix?</h3>
-                <p class="card__content">Entrée <strong class="card__bold">6€</strong> gratuit pour les moins de
-                    16ans.
-                    Garderie pour les
-                    enfants sur
-                    place.</p>
+                <div class="card__content"> @option('Infos.price')</div>
                 <a
                     href="/billetterie"
                     class="card__cta"
@@ -140,8 +136,9 @@
             </section>
             <img
                 class="main__second__bg"
-                src="../assets/cheese_white_bg.png"
+                src="{{asset('assets/chees_white_bg-750.png')}}"
                 alt=""
+                srcset="{{asset('assets/chees_white_bg-500.png')}} 500w, {{asset('assets/chees_white_bg-750.png')}} 750w"
             >
         </div>
     </section>

@@ -86,9 +86,9 @@
                 <div class="second__footer">
                     <img
                         class="second__footer__img"
-                        src="https://source.unsplash.com/random1920x1080"
+                        src="{{url('/assets/giving-food-1300.jpg')}}"
                         alt="Main qui tend de la nourriture"
-                        srcset=""
+                        srcset="{{url('/assets/giving-food-750.jpg')}} 750w, {{url('/assets/giving-food-1300.jpg')}} 1300w"
                     >
                 </div>
             </div>

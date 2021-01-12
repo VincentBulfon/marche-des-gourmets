@@ -24,6 +24,10 @@
             href="{{asset('css/app.css')}}"
         >
         <link
+            rel="stylesheet"
+            href="https://use.typekit.net/fwj1dgj.css"
+        >
+        <link
             rel="shortcut icon"
             href="{{asset('assets/favicon.jpeg')}}"
             type="image/x-icon"
@@ -48,7 +52,7 @@
                     href="/"
                     class="title__link"
                 >Le marché <br>des
-                    <span class="header__title header__title--manuscrit manuscrit">Gourmets</span></a>
+                    <span class="header__title header__title--manuscrit manuscrit tk-timberline">Gourmets</span></a>
             </h1>
             <label
                 for="menu"

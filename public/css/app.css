@@ -186,7 +186,7 @@ body {
 }
 
 * {
-  font-family: "Archia";
+  font-family: "Archia", "Lucida Grande", Tahoma, Helvetica, Verdana, Sans-serif;
 }
 
 .header {
@@ -233,7 +233,7 @@ body {
   grid-column: 1/4;
   grid-row: 2/2;
   width: 100%;
-  font-family: "Archia";
+  font-family: "Archia", "Lucida Grande", Tahoma, Helvetica, Verdana, Sans-serif;
   background-image: url("../assets/produits_sur_ardoise.jpg");
   background-repeat: no-repeat;
   background-clip: border-box;
@@ -259,7 +259,7 @@ body {
   display: block;
   width: 80px;
   justify-self: start;
-  font-family: "Archia";
+  font-family: "Archia", "Lucida Grande", Tahoma, Helvetica, Verdana, Sans-serif;
   font-size: 10px;
   font-size: 0.625rem;
   font-weight: 400;
@@ -270,7 +270,6 @@ body {
 
 .manuscrit {
   color: #4edf7f;
-  font-family: "Timberline";
 }
 
 .manuscrit:first-letter {
@@ -308,7 +307,7 @@ body {
 .nav__item {
   display: block;
   padding: 0.5em 0;
-  font-family: "Archia";
+  font-family: "Archia", "Lucida Grande", Tahoma, Helvetica, Verdana, Sans-serif;
   font-weight: regular;
   font-size: 16px;
   font-size: 1rem;
@@ -551,7 +550,7 @@ strong {
 
 .footer {
   padding: 2.074em 6.25%;
-  font-family: "Archia";
+  font-family: "Archia", "Lucida Grande", Tahoma, Helvetica, Verdana, Sans-serif;
   background-color: #171c1c;
   font-size: 13.333px;
   font-size: 0.8333125rem;
@@ -1656,6 +1655,12 @@ select::-ms-expand {
 .contact__container {
     max-width: 1190px;
     margin: 0 auto;
+  }
+
+  .second__head__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
   }
 
   .footer {

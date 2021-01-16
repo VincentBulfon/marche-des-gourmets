@@ -33,7 +33,7 @@
                     </p>
                     @endif
                     @csrf
-                    @include('parts.personinfos')
+                    @include('parts.personInfos')
                     <label
                         class="label"
                         for="message"

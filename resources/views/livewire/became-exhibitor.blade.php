@@ -19,7 +19,7 @@
         @csrf
         <section class="form__section form">
             <h3 class="tird__subtitle subtitle">Informations de contact</h3>
-            @include('parts.personinfos')
+            @include('parts.personInfos')
         </section>
         <section class="form__section form form__section--footer">
             <h3 class="third__subtitle subtitle">Information sur l'entreprise</h3>

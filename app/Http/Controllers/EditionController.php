@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\years;
+use App\Models\Years;
 
 class EditionController extends Controller
 {

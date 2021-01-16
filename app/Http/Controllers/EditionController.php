@@ -8,7 +8,7 @@ class EditionController extends Controller
 {
     public function index()
     {
-        $year = years::all()->last();
+        $year = Years::all()->last();
 
         return view('edition', compact('year'));
     }

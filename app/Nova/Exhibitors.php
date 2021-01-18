@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Models\Exhibitor;
 use Benjacho\BelongsToManyField\BelongsToManyField;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Boolean;
@@ -14,7 +15,8 @@ class Exhibitors extends Resource
      *
      * @var string
      */
-    public static $model = \App\Models\Exhibitor::class;
+    public static $model = Exhibitor::class;
+
     /**
      * The logical group associated with the resource.
      *
@@ -24,7 +26,7 @@ class Exhibitors extends Resource
 
     public static function label()
     {
-        return 'Liste des exposants';
+        return 'Exposant';
     }
 
     /**
@@ -40,7 +42,8 @@ class Exhibitors extends Resource
      * @var array
      */
     public static $search = [
-        'company_name'
+        'company_name',
+        'tags'
     ];
 
     /**

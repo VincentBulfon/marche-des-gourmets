@@ -8,7 +8,7 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class years extends Model implements HasMedia
+class Years extends Model implements HasMedia
 {
     use InteractsWithMedia;
     use HasFactory;

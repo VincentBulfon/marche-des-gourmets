@@ -28,9 +28,9 @@ class Infos extends Template
     public function fields(Request $request)
     {
         return [
-            Flexible::make('Dates')->addLayout("Jour d'ouverture du marché  ", 'openDates', [
-                DateTime::make('Date et heure de début de la journée', 'startingTime')->format('D-M-Y H:mm')->sortable(),
-                DateTime::make('Date et heure de fin de la journée', 'endingTime')->format('D-M-Y H:mm')->sortable(),
+            Flexible::make('Dates', 'dates')->addLayout("Jour d'ouverture du marché  ", 'openDates', [
+                DateTime::make('Date et heure de début de la journée', 'startingTime')->format('D-M-Y H:mm')->sortable()->resolveUsing(function ($value) {return $value;}),
+                DateTime::make('Date et heure de fin de la journée', 'endingTime')->format('D-M-Y H:mm')->sortable()->resolveUsing(function ($value) {return $value;}),
             ])->button("Ajouter une date d'ouverture"),
             Text::make('Nom du lieu', 'placeName')->required(),
             Text::make('Adresse du lieu', 'placeAddress')->required(),

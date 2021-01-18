@@ -4,7 +4,7 @@ namespace App\Nova;
 
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\DateTime as FieldsDateTime;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
@@ -17,6 +17,14 @@ class Years extends Resource
      * @var string
      */
     public static $model = \App\Models\Years::class;
+
+    /**
+     * The single value that should be used to represent the resource when being displayed.
+     *
+     * @var string
+     */
+    public static $title = 'year';
+
     /**
      * The logical group associated with the resource.
      *
@@ -28,13 +36,6 @@ class Years extends Resource
     {
         return 'Édition';
     }
-
-    /**
-     * The single value that should be used to represent the resource when being displayed.
-     *
-     * @var string
-     */
-    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -54,9 +55,9 @@ class Years extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make(__('ID'), 'id')->sortable()->hideFromIndex(),
+            ID::make(__('ID'), 'id')->sortable(),
             Images::make('Images', 'year-pictures')->withResponsiveImages()->rules('required'),
-            DateTime::make('Année', 'year')->format('yyyy')->sortable()->rules('required'),
+            FieldsDateTime::make('Année', 'year')->format('yyyy')->sortable()->rules('required'),
             Markdown::make('Écriver un texte definissant les dates', 'date')->hideFromIndex()->rules('required')->hideFromIndex(),
             Text::make('Entrez lieu de l\'évenement', 'location')->sortable()->rules('required'),
             Text::make('Entrez le nombre de personnes ayant participé', 'populartiy')->default(0)->sortable(),

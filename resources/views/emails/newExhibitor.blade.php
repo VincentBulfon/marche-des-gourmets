@@ -2,7 +2,7 @@
 
 <body>
 	<h1>Nouvel exposant sur le marché des gourmets</h1>
-	<p>Nn nouvel exposant s'est inscrit sur le site du marché des gourmets, veuillez vous connecter sur le site afin de
+	<p>Nu nouvel exposant s'est inscrit sur le site du marché des gourmets, veuillez vous connecter sur le site afin de
 		valider ses données.</p>
 	<div>
 		<h2>Informations de contacts</h2>

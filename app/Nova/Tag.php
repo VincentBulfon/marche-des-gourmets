@@ -38,7 +38,7 @@ class Tag extends Resource
 
     public static function label()
     {
-        return 'Liste des tags';
+        return 'Tags';
     }
 
     /**

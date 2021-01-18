@@ -21,7 +21,8 @@
                 <dd class="edition__term"><strong class="strong">{{$year->populartiy}}</strong></dd>
             </dl>
             <div class="masonry">
-                @if($year->getMedia('tata'))
+                @if($year->getMedia('year-pictures'))
+                @dump($year->getMedia('year-pictures'))
                 @foreach($year->getMedia('year-pictures') as $media)
                 {{$media()->lazy()->attributes(['class'=>'masonry__item'])}}
                 @endforeach

@@ -81,10 +81,7 @@
         </div>
     </section>
     <section class="main__second">
-        <div>@foreach(Page::option('Infos')->flexible('dates') as $date)
-            @dump($date)
-            @endforeach
-        </div>
+
         <div class="second__head">
             <div class="second__head__container">
                 <h2 class="second__title second__title--right title">Infos pratiques</h2>

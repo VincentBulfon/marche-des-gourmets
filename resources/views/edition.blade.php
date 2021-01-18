@@ -13,6 +13,7 @@
             <dl class="edition__infos">
                 <dt class="edition__definition">Dates&nbsp;:&nbsp;</dt>
                 <dd class="edition__term">
+
                     @markdown($year->date)
                 </dd>
                 <dt class="edition__definition">Lieu&nbsp;:&nbsp;</dt>
@@ -22,7 +23,6 @@
             </dl>
             <div class="masonry">
                 @if($year->getMedia('year-pictures'))
-                @dump($year->getMedia('year-pictures'))
                 @foreach($year->getMedia('year-pictures') as $media)
                 {{$media()->lazy()->attributes(['class'=>'masonry__item'])}}
                 @endforeach

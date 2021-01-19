@@ -460,7 +460,20 @@ input[type="submit"] {
 }
 .select {
     outline: none;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) calc(1em - 2px),
+        calc(100% - 15px) calc(1em - 2px), calc(100% - 2.5em) 0;
+    background-size: 5px 5px, 5px 5px, 1px 2.5em;
+    background-repeat: no-repeat;
+}
+.select__container {
     &::after {
+        position: relative;
+        top: -44px;
+        left: calc(100% - 20px);
+
         content: "";
         display: block;
         width: 0.8em;

@@ -37,6 +37,10 @@ Route::get('/billetterie ', function () {
 })->template(\App\Nova\Templates\Ticketing::class)->name('ticketing');
 Route::get('/édition', [EditionController::class, 'index'])->name('edition');
 
+Route::get('/legals', function () {
+    return view('legals');
+})->name('legals');
+
 Route::get(
     '/checkout',
     [ CheckoutController::class, 'checkout']

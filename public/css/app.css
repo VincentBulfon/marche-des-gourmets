@@ -768,8 +768,16 @@ input[type=submit] {
 
 .select {
   outline: none;
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em - 2px), calc(100% - 15px) calc(1em - 2px), calc(100% - 2.5em) 0;
+  background-size: 5px 5px, 5px 5px, 1px 2.5em;
+  background-repeat: no-repeat;
 }
-.select::after {
+
+.select__container::after {
+  position: relative;
+  top: -44px;
+  left: calc(100% - 20px);
   content: "";
   display: block;
   width: 0.8em;
@@ -1310,6 +1318,13 @@ select::-ms-expand {
   }
   .promo__item {
     width: 25%;
+  }
+
+  .select {
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) calc(1em - 2px), calc(100% - 15px) calc(1em - 2px), calc(100% - 1.75em) 0;
+    background-size: 5px 5px, 5px 5px, 1px 2.5em;
+    background-repeat: no-repeat;
   }
 
   .second__head {
@@ -1874,6 +1889,11 @@ select::-ms-expand {
     grid-column: 1/4;
   }
 
+  .select--fltr1,
+.select--fltr2 {
+    margin-bottom: 0;
+  }
+
   .label--fltr1,
 .select--fltr1 {
     grid-column: 1/2;
@@ -1892,7 +1912,6 @@ select::-ms-expand {
 .checkbox--fltr3 {
     grid-row: 3/4;
     grid-column: 3/4;
-    margin-bottom: 1.44em;
   }
 
   .label--fltr2,

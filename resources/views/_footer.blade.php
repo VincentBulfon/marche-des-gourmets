@@ -84,7 +84,7 @@
 			</div>
 			<div class="links">
 				<a
-					href=""
+					href="{{route('legals')}}"
 					class="link__legal"
 				>Mentions légales</a>
 				<a

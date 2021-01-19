@@ -46,6 +46,11 @@ class Exhibitors extends Resource
         'tags'
     ];
 
+    public static function authorizedToCreate(Request $request)
+    {
+        return false;
+    }
+
     /**
      * Get the fields displayed by the resource.
      *
@@ -57,7 +62,7 @@ class Exhibitors extends Resource
         return [
             Boolean::make('Validé', 'validated')
             ->sortable()
-            ->rules('required', 'boolean'),
+            ->rules('required', 'boolean')->help('Si vous souhaiter masquer un exposant il suffit de changer son status "validé" à "non-validé"'),
             Text::make('Nom de la société', 'company_name')
                 ->sortable()
                 ->rules('required', 'max:255'),

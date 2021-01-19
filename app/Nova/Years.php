@@ -56,8 +56,8 @@ class Years extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Images::make('Images', 'year-pictures')->withResponsiveImages()->rules('required'),
-            FieldsDateTime::make('Année', 'year')->format('yyyy')->sortable()->rules('required'),
+            Images::make('Images', 'year-pictures')->withResponsiveImages()->singleImageRules('max:2000')->rules('required')->help('Le poids par image ne peut pas excéder 2mo.'),
+            FieldsDateTime::make('Année', 'year')->format('yyyy')->sortable()->rules('required')->help('Seule l\'édition avec la date la plus récente est affichée'),
             Markdown::make('Écriver un texte definissant les dates', 'date')->hideFromIndex()->rules('required')->hideFromIndex(),
             Text::make('Entrez lieu de l\'évenement', 'location')->sortable()->rules('required'),
             Text::make('Entrez le nombre de personnes ayant participé', 'populartiy')->default(0)->sortable(),

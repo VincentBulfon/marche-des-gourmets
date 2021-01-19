@@ -72,7 +72,6 @@
 				<img
 					class="about__logo"
 					src="{{asset('assets/province_liege_logo.jpg')}}"
-					srcset=""
 					alt="logo de la province de liège"
 				>
 				<img

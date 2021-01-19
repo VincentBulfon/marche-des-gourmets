@@ -60,7 +60,7 @@ class Years extends Resource
             FieldsDateTime::make('Année', 'year')->format('yyyy')->sortable()->rules('required')->help('Seule l\'édition avec la date la plus récente est affichée'),
             Markdown::make('Écriver un texte definissant les dates', 'date')->hideFromIndex()->rules('required')->hideFromIndex(),
             Text::make('Entrez lieu de l\'évenement', 'location')->sortable()->rules('required'),
-            Text::make('Entrez le nombre de personnes ayant participé', 'populartiy')->default(0)->sortable(),
+            Text::make('Entrez le nombre de personnes ayant participé', 'populartiy')->default(0)->sortable()->rules('required'),
         ];
     }
 

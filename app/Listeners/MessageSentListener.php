@@ -27,6 +27,6 @@ class MessageSentListener implements ShouldQueue
     public function handle($event)
     {
         $mail = new NewMessageMail($event->messageData);
-        Mail::to('vincent.bulfon@gmail.com')->send($mail);
+        Mail::to('dominique.vilain@hepl.be')->send($mail);
     }
 }

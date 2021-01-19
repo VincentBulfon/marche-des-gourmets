@@ -27,6 +27,6 @@ class ExhibitorAddedListener implements ShouldQueue
     public function handle(ExhibitorAdded $event)
     {
         $mail = new NewExhibitorMail($event->exhibitor);
-        Mail::to('vincent.bulfon@gmail.com')->send($mail);
+        Mail::to('dominique.vilain@hepl.be')->send($mail);
     }
 }

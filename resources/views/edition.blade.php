@@ -10,6 +10,7 @@
             <h2 class="first__title title title--short edition">
                 Edition précédente
             </h2>
+            @if($year !== null)
             <dl class="edition__infos">
                 <dt class="edition__definition">Dates&nbsp;:&nbsp;</dt>
                 <dd class="edition__term">
@@ -30,6 +31,9 @@
                 <p>Aucunes photos à afficher pour cette déition</p>
                 @endif
             </div>
+            @else
+            <p class="empty">Il n'y a pas d'édition récente.</p>
+            @endif
         </div>
     </section>
 </main>

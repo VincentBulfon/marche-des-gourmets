@@ -87,17 +87,14 @@
                 <h2 class="second__title second__title--right title">Infos pratiques</h2>
                 <section class="second__card second__card--right">
                     <h3 class="card__header">Quand?</h3>
+
                     <ol class="card__dates">
+                        @foreach(Page::option('Infos')->flexible('dates') as $date)
                         <li
                             class="card__date"
                             itemprop="startDate"
-                        >Le <span class="card__bold">27</span> mars de <span class="card__bold">12h à
-                                22h</span></li>
-                        <li
-                            class="card__date"
-                            itemprop="endDate"
-                        >Le <span class="card__bold">28</span> mars de <span class="card__bold">12h à
-                                20h</span></li>
+                        >@markdown($date->startingTime)</li>
+                        @endforeach
                     </ol>
                     <a
                         href="/billetterie"

@@ -56,7 +56,7 @@
             <label
                 class="label"
                 for="about"
-            >Description du/des produit(s) (maximum 100 charactères)&nbsp;:*</label>
+            >Description du/des produit(s) (maximum 100 caractères)&nbsp;:*</label>
             <textarea
                 class="input textarea @if($errors->has('about')) inputError @endif"
                 name="about"

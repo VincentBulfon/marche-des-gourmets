@@ -32,7 +32,7 @@
     <!-- TODO pagination -->
     @endforeach
     @else
-    <p class="empty">Aucuns éléments ne corespond à ces criètéres.</p>
+    <p class="empty">Aucun élément ne corespond à ces critères.</p>
     @endif
 
     {{$data->links('parts.pagination')}}

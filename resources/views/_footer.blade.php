@@ -7,7 +7,7 @@
 					<a {{request()->routeIs('home') ? "id=currentpage--footer" : ""}}
 						class="footer__nav__item"
 						href="/"
-						>Acceuil</a>
+						>Accueil</a>
 				</li>
 				<li class="footer__link__container">
 					<a {{request()->routeIs('who we are') ? "id=currentpage--footer" : ""}}

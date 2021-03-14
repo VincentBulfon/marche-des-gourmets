@@ -37,7 +37,7 @@ class StoreExhibitorRequest extends FormRequest
             'company_link.unique' => 'Le lien vers ce site/page facebook à déjà été enregistré, si il sagit d\'une erreur veuillez nous contacter via la section contact.',
             'selectedCountry.required' => 'Vous devez indiquer le pays d\'origine de votre entreprise.',
             'region.required' => 'Vous devez indiquer la région d\'origine de votre entreprise.',
-            'about.max' => 'Le texte ne doit pas dépasser 100 charcatères'
+            'about.max' => 'Le texte ne doit pas dépasser 100 carcatères'
         ];
     }
 

@@ -87,7 +87,7 @@
                     <li><a {{request()->routeIs('home') ? "id=currentpage" : ""}}
                             class="nav__item"
                             href="/"
-                            >Acceuil</a></li>
+                            >Accueil</a></li>
                     <li><a {{request()->routeIs('who we are') ? "id=currentpage" : ""}}
                             class="nav__item"
                             href="/qui-sommes-nous"
